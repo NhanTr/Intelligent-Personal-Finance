@@ -18,8 +18,8 @@ from finance_ml.inference.loader import ModelBundleLoader
 from finance_ml.models.anomaly import train_anomaly_detector
 from finance_ml.models.forecast import train_and_select_forecast_models
 from finance_ml.models.registry import save_model_bundle, set_active_pointer
+from finance_ml.data.io import filter_eligible_windows, load_processed_stream
 from finance_ml.schema import ProfileWindow
-from scripts.train import filter_eligible_windows, load_processed_stream
 
 
 def retrain_and_maybe_promote(

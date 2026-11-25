@@ -8,34 +8,13 @@ from pathlib import Path
 import pandas as pd
 
 from finance_ml.config import load_config
-from finance_ml.data.cleaning import clean_transactions
 from finance_ml.data.daily import aggregate_daily_spending
+from finance_ml.data.io import filter_eligible_windows, load_processed_stream
 from finance_ml.evaluation.split import assign_forecast_origins, assign_transaction_splits, compute_time_cutoffs
 from finance_ml.features.forecast_features import build_forecast_dataset
 from finance_ml.models.anomaly import train_anomaly_detector
 from finance_ml.models.forecast import train_and_select_forecast_models
 from finance_ml.models.registry import save_model_bundle, set_active_pointer
-from finance_ml.schema import ProfileWindow
-
-
-def load_processed_stream(proc_dir: Path) -> tuple[pd.DataFrame, dict[str, ProfileWindow]]:
-    tx_path = proc_dir / "transactions.csv"
-    win_path = proc_dir / "profile_windows.json"
-    if not tx_path.exists() or not win_path.exists():
-        raise FileNotFoundError(f"Processed stream not found in {proc_dir}. Run data preparation first.")
-    raw_tx = pd.read_csv(tx_path)
-    clean_df, _ = clean_transactions(raw_tx)
-    raw_win = json.loads(win_path.read_text(encoding="utf-8"))
-    windows = {k: ProfileWindow.model_validate(v) for k, v in raw_win.items()}
-    return clean_df, windows
-
-
-def filter_eligible_windows(windows: dict[str, ProfileWindow], min_days: int = 180) -> dict[str, ProfileWindow]:
-    return {
-        u: w
-        for u, w in windows.items()
-        if (w.tracking_end_date - w.tracking_start_date).days + 1 >= min_days
-    }
 
 
 def main() -> None:

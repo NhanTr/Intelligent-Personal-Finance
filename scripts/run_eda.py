@@ -6,9 +6,9 @@ import argparse
 from pathlib import Path
 
 from finance_ml.data.daily import aggregate_daily_spending
+from finance_ml.data.io import load_processed_stream
 from finance_ml.reporting.eda import generate_eda_artifacts
 from finance_ml.schema import DataManifest
-from scripts.train import load_processed_stream
 
 
 def main() -> None:

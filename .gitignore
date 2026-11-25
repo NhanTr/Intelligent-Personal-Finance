@@ -21,6 +21,9 @@ data/processed/
 
 # Generated heavy artifacts (reproducible via CLI scripts; commit docs/ & contracts/)
 artifacts/
+data/demo/
+data/manifest.json
+docs/.eda_sections.json
 
 # OS
 .DS_Store

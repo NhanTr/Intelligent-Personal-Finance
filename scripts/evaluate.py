@@ -24,9 +24,9 @@ from finance_ml.inference.benchmark import run_latency_benchmark
 from finance_ml.inference.loader import LoadedBundle
 from finance_ml.models.anomaly import score_expense_anomalies
 from finance_ml.models.forecast import Last7DaysBaseline, build_linear_regression_model, build_rf_model
+from finance_ml.data.io import filter_eligible_windows, load_processed_stream
 from finance_ml.reporting.model_card import render_model_card
 from finance_ml.reporting.review_export import export_manual_review_sample
-from scripts.train import filter_eligible_windows, load_processed_stream
 
 
 def _evaluate_forecast_models_on_split(
