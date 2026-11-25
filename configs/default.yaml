@@ -1,0 +1,36 @@
+seed: 42
+timezone: "Asia/Ho_Chi_Minh"
+split_ratios: [0.6, 0.2, 0.2]
+
+currency:
+  inr_to_vnd_rate: 300.0
+
+synthetic:
+  n_core_users: 8
+  core_days: 300
+  start_date: "2026-01-01"
+  short_user_id: "user_short_001"
+  short_user_days: 14
+  internal_transfer_prob: 0.05
+  anomaly_eval_users: 4
+  anomaly_injection_rate: 0.035
+
+forecast:
+  horizon_days: 7
+  min_history_days: 28
+  origin_step_days: 7
+  target_improvement_pct: 10.0
+  rf_grid:
+    n_estimators: [100, 200]
+    max_depth: [4, 6, 10, null]
+    min_samples_leaf: [2, 5, 10]
+
+anomaly:
+  n_estimators: 200
+  validation_quantile: 0.95
+  min_prior_tx_for_user_stats: 5
+  alert_rate_bounds: [0.01, 0.10]
+
+retrain:
+  max_mae_regression_ratio: 1.02
+  min_val_feedback_rows: 10

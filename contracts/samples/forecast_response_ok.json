@@ -1,0 +1,15 @@
+{
+  "status": "ok",
+  "user_id": "user_001",
+  "as_of_date": "2026-09-15",
+  "horizon_days": 7,
+  "forecast_start_date": "2026-09-16",
+  "forecast_end_date": "2026-09-22",
+  "predicted_total_vnd": 845000.0,
+  "unit": "VND",
+  "model_name": "random_forest",
+  "model_version": "v1.0.0",
+  "days_available": 258,
+  "min_days_required": 28,
+  "limitations_note": "Dự báo 7 ngày tới dựa trên hành vi lịch sử (đơn vị VND); không tự quy đổi thành dự báo tháng."
+}

@@ -1,0 +1,5 @@
+transaction_id,user_id,timestamp,type,amount_vnd,category,is_internal_transfer,note
+bad_01,user_001,2026-03-01T08:00:00+07:00,expense,-50000,food,False,Lỗi số tiền âm
+bad_02,user_001,not-a-date,expense,45000,food,False,Lỗi định dạng ngày
+bad_03,user_001,2026-03-02T09:00:00+07:00,refund_unknown,30000,shopping,False,Lỗi loại giao dịch
+syn_user_001_00001,user_001,2026-01-02T10:00:00+07:00,expense,1800000,housing,False,Bản ghi trùng transaction_id
