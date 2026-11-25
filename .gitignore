@@ -1,0 +1,26 @@
+# Virtual environments & caches
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Superpowers scratch workspace
+.superpowers/
+
+# Raw/private data & generated runtime binaries (never commit un-anonymized data)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/
+*private*
+*.secret*
+
+# Generated heavy artifacts (reproducible via CLI scripts; commit docs/ & contracts/)
+artifacts/
+
+# OS
+.DS_Store
