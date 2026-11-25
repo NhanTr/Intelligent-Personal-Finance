@@ -7,7 +7,7 @@ name = "finance-ml"
 version = "0.1.0"
 description = "Intelligent Personal Finance Decision Support System — Data & ML Pipeline (N1-N4)"
 readme = "README.md"
-requires-python = ">=3.12,<3.13"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "numpy>=1.26.0,<3.0.0",
     "pandas>=2.2.0,<3.0.0",

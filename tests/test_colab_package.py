@@ -24,3 +24,5 @@ def test_build_colab_artifacts_creates_valid_thin_notebook_and_complete_zip(tmp_
         assert "requirements-ml.txt" in names
         assert "configs/default.yaml" in names
         assert any(n.startswith("src/finance_ml/") for n in names)
+        pyproject_text = zf.read("pyproject.toml").decode("utf-8")
+        assert "<3.14" in pyproject_text

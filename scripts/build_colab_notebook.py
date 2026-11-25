@@ -91,6 +91,33 @@ def _create_colab_notebook() -> nbformat.NotebookNode:
             "# CHỈ BỎ COMMENT DÒNG DƯỚI ĐÂY ĐÚNG 1 LẦN KHI ĐÃ CHỐT CẤU HÌNH CUỐI CÙNG VỚI KHOA (NGÀY 14):\n"
             "# subprocess.check_call([sys.executable, 'scripts/evaluate.py', '--dataset', 'synthetic', '--unlock-test', '--reason', 'One-shot final test evaluation'])"
         ),
+        new_code_cell(
+            "# Cell 6 (Demo): Kiểm tra trực tiếp 1 giao dịch cụ thể (giống luồng UI nhấp vào giao dịch -> FastAPI gọi detect_anomalies)\n"
+            "import json\n"
+            "from datetime import date\n"
+            "from finance_ml.inference.loader import ModelBundleLoader\n"
+            "from finance_ml.inference.predictor import detect_anomalies, predict_next_7d\n\n"
+            "bundle = ModelBundleLoader(Path('artifacts/models/active.json')).load()\n"
+            "tx_df = pd.read_csv('data/processed/synthetic/transactions.csv')\n\n"
+            "# Thử thêm 1 giao dịch đột biến 9.5 triệu VND ở danh mục shopping cho user_001 để xem model chấm điểm & giải thích\n"
+            "test_tx = pd.DataFrame([{\n"
+            "    'transaction_id': 'demo_check_001',\n"
+            "    'user_id': 'user_001',\n"
+            "    'timestamp': '2026-09-15T21:30:00+07:00',\n"
+            "    'type': 'expense',\n"
+            "    'amount_vnd': 9500000.0,\n"
+            "    'category': 'shopping',\n"
+            "    'is_internal_transfer': False,\n"
+            "    'note': 'Thử kiểm tra giao dịch bất thường'\n"
+            "}])\n"
+            "combined = pd.concat([tx_df, test_tx], ignore_index=True)\n\n"
+            "res_f4 = detect_anomalies(combined, user_id='user_001', bundle=bundle, target_transaction_ids=['demo_check_001'])\n"
+            "print('=== KẾT QUẢ KIỂM TRA 1 GIAO DỊCH (F4) ===')\n"
+            "print(json.dumps(res_f4.model_dump(mode='json'), indent=2, ensure_ascii=False))\n\n"
+            "res_f3 = predict_next_7d(tx_df, user_id='user_001', as_of_date=date(2026, 9, 15), bundle=bundle)\n"
+            "print('\\n=== KẾT QUẢ DỰ BÁO 7 NGÀY TỚI (F3) ===')\n"
+            "print(json.dumps(res_f3.model_dump(mode='json'), indent=2, ensure_ascii=False))"
+        ),
     ]
 
     nb = new_notebook(
