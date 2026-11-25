@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime, timezone
 import json
+import os
 from pathlib import Path
 from typing import Any
 import joblib
@@ -77,10 +78,20 @@ def set_active_pointer(
 ) -> None:
     pointer_path = Path(pointer_path)
     pointer_path.parent.mkdir(parents=True, exist_ok=True)
+    rel_bundle = os.path.relpath(Path(bundle_dir).resolve(), pointer_path.parent.resolve()).replace(os.sep, "/")
     payload = {
         "version": version,
         "dataset_name": dataset_name,
-        "bundle_dir": str(Path(bundle_dir).resolve()),
+        "bundle_dir": rel_bundle,
         "updated_at": datetime.now(timezone.utc).astimezone(VN_TZ).isoformat(),
     }
     pointer_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def resolve_pointer_bundle_dir(pointer_path: Path) -> Path:
+    pointer_path = Path(pointer_path)
+    ptr = json.loads(pointer_path.read_text(encoding="utf-8"))
+    raw = Path(ptr["bundle_dir"])
+    if raw.is_absolute():
+        return raw
+    return (pointer_path.parent / raw).resolve()

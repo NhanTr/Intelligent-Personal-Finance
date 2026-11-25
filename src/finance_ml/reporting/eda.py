@@ -1,9 +1,9 @@
-"""EDA plot and separated markdown report generator."""
+"""EDA plot and separated markdown report generator (self-contained HTML section markers)."""
 
 from __future__ import annotations
 
-import json
 from pathlib import Path
+import re
 import matplotlib
 
 matplotlib.use("Agg")
@@ -12,6 +12,16 @@ import numpy as np
 import pandas as pd
 
 from finance_ml.schema import DataManifest
+
+
+def _extract_marked_section(markdown_text: str, dataset_name: str) -> str | None:
+    pattern = rf"<!-- EDA_SECTION:{re.escape(dataset_name)}:START -->\n(.*?)\n<!-- EDA_SECTION:{re.escape(dataset_name)}:END -->"
+    m = re.search(pattern, markdown_text, flags=re.DOTALL)
+    return m.group(1) if m else None
+
+
+def _wrap_marked_section(dataset_name: str, body: str) -> str:
+    return f"<!-- EDA_SECTION:{dataset_name}:START -->\n{body.rstrip()}\n<!-- EDA_SECTION:{dataset_name}:END -->"
 
 
 def _build_stream_section(
@@ -62,7 +72,6 @@ def _build_stream_section(
             f"- Xu hướng chi tiêu ngày: `{figures_rel_dir}/daily_spending_trend.png`",
             f"- Tỷ trọng danh mục: `{figures_rel_dir}/category_share.png`",
             f"- Phân phối log số tiền giao dịch: `{figures_rel_dir}/amount_log_distribution.png`",
-            "",
         ]
     )
 
@@ -83,7 +92,6 @@ def generate_eda_artifacts(
     saved_figs: list[Path] = []
     exp_df = clean_df[(clean_df["type"] == "expense") & (~clean_df["is_internal_transfer"].astype(bool))]
 
-    # 1. Daily total spending trend across tracked days
     p1 = figures_dir / "daily_spending_trend.png"
     fig, ax = plt.subplots(figsize=(9, 4))
     by_day = daily_df.groupby("date", as_index=False)["total_expense_vnd"].mean()
@@ -97,7 +105,6 @@ def generate_eda_artifacts(
     plt.close(fig)
     saved_figs.append(p1)
 
-    # 2. Category share bar chart
     p2 = figures_dir / "category_share.png"
     fig, ax = plt.subplots(figsize=(8, 4))
     cat_tot = exp_df.groupby("category")["amount_vnd"].sum().sort_values(ascending=True)
@@ -109,7 +116,6 @@ def generate_eda_artifacts(
     plt.close(fig)
     saved_figs.append(p2)
 
-    # 3. Log amount histogram
     p3 = figures_dir / "amount_log_distribution.png"
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.hist(np.log10(np.maximum(exp_df["amount_vnd"].to_numpy(dtype=float), 1.0)), bins=30, edgecolor="black")
@@ -121,26 +127,23 @@ def generate_eda_artifacts(
     plt.close(fig)
     saved_figs.append(p3)
 
-    # Store per-stream markdown snippet so synthetic and real_public never overwrite each other
-    sections_cache = report_path.parent / ".eda_sections.json"
-    cache_data: dict[str, str] = {}
-    if sections_cache.exists():
-        cache_data = json.loads(sections_cache.read_text(encoding="utf-8"))
+    existing_md = report_path.read_text(encoding="utf-8") if report_path.exists() else ""
+    sections: dict[str, str] = {
+        "synthetic": _extract_marked_section(existing_md, "synthetic")
+        or "## Luồng A — Dữ liệu Mô phỏng (`synthetic`)\n\n*Chưa chạy EDA cho luồng này.*",
+        "real_public": _extract_marked_section(existing_md, "real_public")
+        or (
+            "## Luồng B — Dữ liệu Công khai Kaggle (`real_public`)\n\n"
+            "*Chưa có tệp `data/raw/daily_household_transactions.csv` — chạy `prepare_public_data.py` và `run_eda.py --dataset real_public` khi tải CSV về.*"
+        ),
+    }
 
-    cache_data[dataset_name] = _build_stream_section(
+    sections[dataset_name] = _build_stream_section(
         dataset_name,
         clean_df,
         daily_df,
         manifest,
         figures_rel_dir=f"artifacts/{dataset_name}/figures",
-    )
-    sections_cache.write_text(json.dumps(cache_data, indent=2, ensure_ascii=False), encoding="utf-8")
-
-    syn_sec = cache_data.get("synthetic", "## Luồng A — Dữ liệu Mô phỏng (`synthetic`)\n\n*Chưa chạy EDA cho luồng này.*\n")
-    pub_sec = cache_data.get(
-        "real_public",
-        "## Luồng B — Dữ liệu Công khai Kaggle (`real_public`)\n\n"
-        "*Chưa có tệp `data/raw/daily_household_transactions.csv` — chạy `prepare_public_data.py` và `run_eda.py --dataset real_public` khi tải CSV về.*\n",
     )
 
     full_md = "\n".join(
@@ -149,10 +152,12 @@ def generate_eda_artifacts(
             "",
             "> **Nguyên tắc tách biệt:** Kết quả giữa dữ liệu mô phỏng (`synthetic`) và dữ liệu công khai (`real_public`) được báo cáo hoàn toàn độc lập; dữ liệu mô phỏng chỉ dùng để minh họa kỹ thuật và kiểm thử luồng đa người dùng VND.",
             "",
-            syn_sec,
+            _wrap_marked_section("synthetic", sections["synthetic"]),
+            "",
             "---",
             "",
-            pub_sec,
+            _wrap_marked_section("real_public", sections["real_public"]),
+            "",
         ]
     )
     report_path.write_text(full_md, encoding="utf-8")

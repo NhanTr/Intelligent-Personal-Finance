@@ -46,3 +46,25 @@ def test_anomaly_features_causal_invariance_and_cold_user_unknown_category():
     assert np.isfinite(X_a).all()
     np.testing.assert_allclose(X_a[0], X_b[0])
     assert ctx_a.iloc[0]["user_amount_ratio"] == ctx_b.iloc[0]["user_amount_ratio"]
+
+
+def test_anomaly_cat_ratio_falls_back_to_user_median_before_pooled_train():
+    train_tx = pd.DataFrame([
+        {"transaction_id": f"s{i}", "user_id": "u_low", "timestamp": pd.Timestamp(pd.Timestamp("2026-01-01T10:00:00+07:00").to_pydatetime() + timedelta(days=i)), "type": "expense", "amount_vnd": 50000.0, "category": "shopping", "is_internal_transfer": False}
+        for i in range(10)
+    ])
+    state = fit_anomaly_feature_state(train_tx, min_prior_tx=5)
+
+    # Established high-spending user (8 prior food tx at 1,000,000 VND, 0 prior shopping tx)
+    high_user_tx = pd.DataFrame(
+        [
+            {"transaction_id": f"h{i}", "user_id": "u_high", "timestamp": pd.Timestamp(pd.Timestamp("2026-02-01T10:00:00+07:00").to_pydatetime() + timedelta(days=i)), "type": "expense", "amount_vnd": 1000000.0, "category": "food", "is_internal_transfer": False}
+            for i in range(8)
+        ]
+        + [
+            {"transaction_id": "h_shop", "user_id": "u_high", "timestamp": pd.Timestamp("2026-02-15T10:00:00+07:00"), "type": "expense", "amount_vnd": 1000000.0, "category": "shopping", "is_internal_transfer": False}
+        ]
+    )
+    _, ctx = transform_anomaly_features(high_user_tx, state)
+    shop_row = ctx[ctx["transaction_id"] == "h_shop"].iloc[0]
+    assert 0.95 <= float(shop_row["user_cat_amount_ratio"]) <= 1.05

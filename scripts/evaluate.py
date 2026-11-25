@@ -24,6 +24,7 @@ from finance_ml.inference.benchmark import run_latency_benchmark
 from finance_ml.inference.loader import LoadedBundle
 from finance_ml.models.anomaly import score_expense_anomalies
 from finance_ml.models.forecast import Last7DaysBaseline, build_linear_regression_model, build_rf_model
+from finance_ml.models.registry import resolve_pointer_bundle_dir
 from finance_ml.data.io import filter_eligible_windows, load_processed_stream
 from finance_ml.reporting.model_card import render_model_card
 from finance_ml.reporting.review_export import export_manual_review_sample
@@ -98,8 +99,8 @@ def main() -> None:
     figures_dir = ds_art_dir / "figures"
     metrics_dir.mkdir(parents=True, exist_ok=True)
 
-    active_ptr = json.loads((ds_art_dir / "models" / "active.json").read_text(encoding="utf-8"))
-    bundle = joblib.load(Path(active_ptr["bundle_dir"]) / "bundle.joblib")
+    ptr_file = ds_art_dir / "models" / "active.json"
+    bundle = joblib.load(resolve_pointer_bundle_dir(ptr_file) / "bundle.joblib")
 
     proc_dir = args.root / "data" / "processed" / args.dataset
     clean_df, all_windows = load_processed_stream(proc_dir)

@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 import joblib
 
-from finance_ml.models.registry import ModelBundle
+from finance_ml.models.registry import ModelBundle, resolve_pointer_bundle_dir
 
 
 @dataclass
@@ -27,8 +27,7 @@ class ModelBundleLoader:
         try:
             target = self.pointer_or_dir
             if target.suffix == ".json":
-                ptr = json.loads(target.read_text(encoding="utf-8"))
-                bundle_dir = Path(ptr["bundle_dir"])
+                bundle_dir = resolve_pointer_bundle_dir(target)
             else:
                 bundle_dir = target
 

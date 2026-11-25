@@ -22,6 +22,12 @@ def test_normalize_category_handles_unknown_and_aliases():
     assert normalize_category(None) == "other"
 
 
+def test_normalize_category_word_boundary_prevents_false_substring_match():
+    assert normalize_category("Parenting support") == "other"
+    assert normalize_category("Different item") == "other"
+    assert normalize_category("Monthly rent payment") == "housing"
+
+
 def test_transaction_record_rejects_non_positive_amount():
     with pytest.raises(ValidationError):
         TransactionRecord(

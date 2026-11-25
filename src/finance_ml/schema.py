@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import date, datetime, timedelta, timezone
 import math
+import re
 from typing import Any, Literal
 from pydantic import BaseModel, Field, field_validator, model_validator
 
@@ -132,7 +133,7 @@ def normalize_category(raw: Any) -> str:
     if cleaned in _CATEGORY_ALIASES:
         return _CATEGORY_ALIASES[cleaned]
     for key, target in _CATEGORY_ALIASES.items():
-        if key in cleaned and len(key) >= 4:
+        if len(key) >= 4 and re.search(rf"(?<!\w){re.escape(key)}(?!\w)", cleaned):
             return target
     return "other"
 

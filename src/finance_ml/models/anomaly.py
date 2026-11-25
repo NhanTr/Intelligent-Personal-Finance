@@ -8,6 +8,7 @@ import pandas as pd
 from sklearn.ensemble import IsolationForest
 
 from finance_ml.config import PipelineConfig
+from finance_ml.data.cleaning import _parse_bool
 from finance_ml.features.anomaly_features import (
     AnomalyFeatureFitState,
     fit_anomaly_feature_state,
@@ -84,12 +85,10 @@ def train_anomaly_detector(
 
     # Optional validation feedback calibration: reduce false positives on confirmed normal rows
     if val_feedback_df is not None and not val_feedback_df.empty:
-        fb_map = dict(
-            zip(
-                val_feedback_df["transaction_id"].astype(str),
-                val_feedback_df["is_confirmed_anomaly"].astype(bool),
-            )
-        )
+        fb_map = {
+            str(tid): _parse_bool(flag)
+            for tid, flag in zip(val_feedback_df["transaction_id"], val_feedback_df["is_confirmed_anomaly"])
+        }
         matched_mask = val_expense_df["transaction_id"].astype(str).isin(fb_map.keys()).to_numpy()
         if int(matched_mask.sum()) >= config.retrain.min_val_feedback_rows:
             matched_ids = val_expense_df["transaction_id"].astype(str).to_numpy()[matched_mask]

@@ -148,8 +148,10 @@ def transform_anomaly_features(
             prior_cat_amts = [amt_arr[j] for j in range(strict_end) if cat_list[j] == cat]
             if len(prior_cat_amts) >= 3:
                 cat_ref = float(np.median(prior_cat_amts))
+            elif strict_end >= state.min_prior_tx:
+                cat_ref = ref_med
             else:
-                cat_ref = state.cat_medians.get(cat, ref_med)
+                cat_ref = state.cat_medians.get(cat, state.global_median_amount)
 
             u_ratio = float(amt / (ref_med + 1.0))
             u_zscore = float((log_amt - ref_lmean) / ref_lstd)

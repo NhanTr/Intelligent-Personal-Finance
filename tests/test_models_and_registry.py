@@ -57,3 +57,31 @@ def test_end_to_end_synthetic_train_and_bundle_save(tmp_path: Path):
     set_active_pointer(tmp_path / "models" / "active.json", bdir, "v1.0.0", "synthetic")
     assert (bdir / "bundle.joblib").exists()
     assert (bdir / "metadata.json").exists()
+
+
+def test_active_pointer_uses_portable_relative_path(tmp_path: Path):
+    import shutil
+    from finance_ml.inference.loader import ModelBundleLoader
+
+    cfg = load_config(Path("configs/default.yaml"))
+    syn = generate_synthetic_dataset(cfg)
+    core_windows = {k: v for k, v in syn.profile_windows.items() if not k.startswith("user_short")}
+    core_tx = syn.transactions_df[syn.transactions_df["user_id"].isin(core_windows)]
+    daily = aggregate_daily_spending(core_tx, core_windows)
+    cutoffs = compute_time_cutoffs(daily, cfg.split_ratios)
+    f_ds = assign_forecast_origins(build_forecast_dataset(daily, core_windows), cutoffs)
+    f_out = train_and_select_forecast_models(f_ds[f_ds["split"] == "train"], f_ds[f_ds["split"] == "validation"], cfg)
+    exp_tx = core_tx[(core_tx["type"] == "expense") & (~core_tx["is_internal_transfer"])]
+    exp_split = assign_transaction_splits(exp_tx, cutoffs)
+    det = train_anomaly_detector(exp_split[exp_split["split"] == "train"], exp_split[exp_split["split"] == "validation"], cfg)
+
+    orig_root = tmp_path / "orig_artifacts"
+    bdir = save_model_bundle(orig_root / "synthetic", "v1.0.0", f_out, det, {"seed": cfg.seed})
+    set_active_pointer(orig_root / "models" / "active.json", bdir, "v1.0.0", "synthetic")
+
+    moved_root = tmp_path / "khoa_machine_artifacts"
+    shutil.move(str(orig_root), str(moved_root))
+
+    loaded = ModelBundleLoader(moved_root / "models" / "active.json", allow_baseline_fallback=False).load()
+    assert loaded.fallback_only is False
+    assert loaded.version == "v1.0.0"

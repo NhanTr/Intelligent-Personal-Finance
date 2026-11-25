@@ -2,6 +2,7 @@
 
 > **Nguyên tắc tách biệt:** Kết quả giữa dữ liệu mô phỏng (`synthetic`) và dữ liệu công khai (`real_public`) được báo cáo hoàn toàn độc lập; dữ liệu mô phỏng chỉ dùng để minh họa kỹ thuật và kiểm thử luồng đa người dùng VND.
 
+<!-- EDA_SECTION:synthetic:START -->
 ## Luồng A — Dữ liệu Mô phỏng Đa người dùng VND (`synthetic`)
 
 - **Nguồn / Bộ sinh:** `finance_ml.data.synthetic.generate_synthetic_dataset`
@@ -28,9 +29,12 @@
 - Xu hướng chi tiêu ngày: `artifacts/synthetic/figures/daily_spending_trend.png`
 - Tỷ trọng danh mục: `artifacts/synthetic/figures/category_share.png`
 - Phân phối log số tiền giao dịch: `artifacts/synthetic/figures/amount_log_distribution.png`
+<!-- EDA_SECTION:synthetic:END -->
 
 ---
 
+<!-- EDA_SECTION:real_public:START -->
 ## Luồng B — Dữ liệu Công khai Kaggle (`real_public`)
 
 *Chưa có tệp `data/raw/daily_household_transactions.csv` — chạy `prepare_public_data.py` và `run_eda.py --dataset real_public` khi tải CSV về.*
+<!-- EDA_SECTION:real_public:END -->

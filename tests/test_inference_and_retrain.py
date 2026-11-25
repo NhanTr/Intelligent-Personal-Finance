@@ -57,3 +57,33 @@ def test_retrain_atomic_promotion_and_latency_under_3_seconds(tmp_path: Path):
     bench = run_latency_benchmark(bundle, syn.transactions_df, "user_001", date(2026, 9, 1), n_runs=25)
     assert bench["n_runs"] == 25
     assert bench["max_latency_sec"] <= 3.0
+
+
+def test_retrain_blocks_existing_version_parses_string_false_feedback_and_smoke_tests(tmp_path: Path):
+    import pytest
+
+    cfg = load_config(Path("configs/default.yaml"))
+    syn = generate_synthetic_dataset(cfg)
+    ds_dir = tmp_path / "synthetic"
+    active_ptr = tmp_path / "models" / "active.json"
+
+    r1 = retrain_and_maybe_promote(syn.transactions_df, syn.profile_windows, None, ds_dir, active_ptr, cfg, "v1.0.0")
+    assert r1["promoted"] is True
+    assert r1.get("smoke_test_passed") is True
+
+    # Re-using existing version must raise FileExistsError rather than overwriting rollback artifact
+    with pytest.raises(FileExistsError):
+        retrain_and_maybe_promote(syn.transactions_df, syn.profile_windows, None, ds_dir, active_ptr, cfg, "v1.0.0")
+
+    tx_id = syn.transactions_df[
+        (syn.transactions_df["user_id"] == "user_001") & (syn.transactions_df["type"] == "expense") & (~syn.transactions_df["is_internal_transfer"])
+    ].iloc[0]["transaction_id"]
+
+    # Older record marked true, newer record corrected to string "false" (as read from messy CSV)
+    fb = pd.DataFrame([
+        {"transaction_id": tx_id, "user_id": "user_001", "is_confirmed_anomaly": "true", "model_version": "v1.0.0", "created_at": "2026-05-01T09:00:00+07:00"},
+        {"transaction_id": tx_id, "user_id": "user_001", "is_confirmed_anomaly": "false", "model_version": "v1.0.0", "created_at": "2026-05-02T09:00:00+07:00"},
+    ])
+    r2 = retrain_and_maybe_promote(syn.transactions_df, syn.profile_windows, fb, ds_dir, active_ptr, cfg, "v1.1.0")
+    assert r2["excluded_confirmed_train_anomalies"] == 0
+    assert r2["smoke_test_passed"] is True

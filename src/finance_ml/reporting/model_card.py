@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from finance_ml.models.registry import resolve_pointer_bundle_dir
+
 
 def _format_stream_card(dataset_name: str, ds_dir: Path) -> str:
     label = (
@@ -23,7 +25,7 @@ def _format_stream_card(dataset_name: str, ds_dir: Path) -> str:
         return f"## {label}\n\n*Chưa có mô hình huấn luyện cho luồng `{dataset_name}`.*\n"
 
     ptr = json.loads(active_ptr.read_text(encoding="utf-8"))
-    meta = json.loads((Path(ptr["bundle_dir"]) / "metadata.json").read_text(encoding="utf-8"))
+    meta = json.loads((resolve_pointer_bundle_dir(active_ptr) / "metadata.json").read_text(encoding="utf-8"))
     val = json.loads(val_path.read_text(encoding="utf-8"))
 
     lines: list[str] = [

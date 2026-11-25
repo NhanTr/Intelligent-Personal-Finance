@@ -59,3 +59,15 @@ def test_one_shot_test_lock_guard(tmp_path: Path):
 
     with pytest.raises(PermissionError):
         guard.verify_and_record(unlock=True, reason="", config_hash="abc")
+
+
+def test_one_shot_test_lock_guard_blocks_accidental_second_unlock_without_bugfix_prefix(tmp_path: Path):
+    guard = TestLockGuard(tmp_path / "test_evaluation_lock.json")
+    guard.verify_and_record(unlock=True, reason="One-shot final test evaluation", config_hash="abc")
+
+    with pytest.raises(PermissionError):
+        guard.verify_and_record(unlock=True, reason="One-shot final test evaluation", config_hash="abc")
+
+    rec2 = guard.verify_and_record(unlock=True, reason="bugfix: fixed currency scaling defect", config_hash="def")
+    assert rec2["unlock_count"] == 2
+    assert rec2["history"][-1]["is_implementation_bugfix_rerun"] is True

@@ -40,6 +40,12 @@ class TestLockGuard:
             existing = json.loads(self.lock_path.read_text(encoding="utf-8"))
 
         is_rerun = int(existing.get("unlock_count", 0)) >= 1
+        if is_rerun:
+            if not clean_reason.lower().startswith("bugfix:") or not clean_reason.split(":", 1)[1].strip():
+                raise PermissionError(
+                    "Test split was already unlocked once. Any subsequent run must be justified as an "
+                    "implementation bugfix prefixed with 'bugfix: <explanation>'."
+                )
         entry = {
             "timestamp": datetime.now(timezone.utc).astimezone(VN_TZ).isoformat(),
             "reason": clean_reason,

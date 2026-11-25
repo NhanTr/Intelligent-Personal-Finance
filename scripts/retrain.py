@@ -4,22 +4,59 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 from typing import Any
 import numpy as np
 import pandas as pd
 
 from finance_ml.config import PipelineConfig, load_config
-from finance_ml.data.cleaning import clean_transactions
+from finance_ml.data.cleaning import _parse_bool, _parse_vn_timestamp, clean_transactions
 from finance_ml.data.daily import aggregate_daily_spending
+from finance_ml.data.io import filter_eligible_windows, load_processed_stream
 from finance_ml.evaluation.split import assign_forecast_origins, assign_transaction_splits, compute_time_cutoffs
 from finance_ml.features.forecast_features import FORECAST_FEATURE_COLUMNS, build_forecast_dataset
 from finance_ml.inference.loader import ModelBundleLoader
+from finance_ml.inference.predictor import detect_anomalies, predict_next_7d
 from finance_ml.models.anomaly import train_anomaly_detector
 from finance_ml.models.forecast import train_and_select_forecast_models
 from finance_ml.models.registry import save_model_bundle, set_active_pointer
-from finance_ml.data.io import filter_eligible_windows, load_processed_stream
-from finance_ml.schema import ProfileWindow
+from finance_ml.schema import FeedbackRecord, ProfileWindow
+
+
+def _normalize_feedback_df(feedback_df: pd.DataFrame | None) -> pd.DataFrame | None:
+    if feedback_df is None or feedback_df.empty:
+        return None
+
+    parsed_rows: list[dict[str, Any]] = []
+    for row in feedback_df.to_dict(orient="records"):
+        ts = _parse_vn_timestamp(row.get("created_at"))
+        if ts is None:
+            continue
+        rec = FeedbackRecord(
+            transaction_id=str(row["transaction_id"]).strip(),
+            user_id=str(row["user_id"]).strip(),
+            is_confirmed_anomaly=_parse_bool(row.get("is_confirmed_anomaly")),
+            model_version=str(row.get("model_version", "unknown")).strip() or "unknown",
+            created_at=ts,
+        )
+        parsed_rows.append(
+            {
+                "transaction_id": rec.transaction_id,
+                "user_id": rec.user_id,
+                "is_confirmed_anomaly": rec.is_confirmed_anomaly,
+                "model_version": rec.model_version,
+                "created_at": pd.Timestamp(rec.created_at),
+            }
+        )
+
+    if not parsed_rows:
+        return None
+
+    norm = pd.DataFrame(parsed_rows)
+    norm = norm.sort_values(["created_at", "transaction_id"], kind="mergesort")
+    norm = norm.drop_duplicates(subset=["transaction_id"], keep="last").reset_index(drop=True)
+    return norm
 
 
 def retrain_and_maybe_promote(
@@ -33,6 +70,20 @@ def retrain_and_maybe_promote(
     force_promote: bool = False,
 ) -> dict[str, Any]:
     dataset_dir = Path(dataset_dir)
+    target_version_dir = dataset_dir / "models" / new_version
+    if target_version_dir.exists():
+        raise FileExistsError(
+            f"Candidate version directory already exists at {target_version_dir}; "
+            "choose a new semantic version to preserve rollback history."
+        )
+
+    ds_active_ptr = dataset_dir / "models" / "active.json"
+    loaded_active = (
+        ModelBundleLoader(ds_active_ptr, allow_baseline_fallback=False).load()
+        if ds_active_ptr.exists()
+        else None
+    )
+
     clean_df, _ = clean_transactions(transactions_df)
     core_windows = filter_eligible_windows(profile_windows, min_days=180)
     core_df = clean_df[clean_df["user_id"].isin(core_windows.keys())].copy()
@@ -63,18 +114,19 @@ def retrain_and_maybe_promote(
     train_exp = exp_split[exp_split["split"] == "train"]
     val_exp = exp_split[exp_split["split"] == "validation"]
 
+    norm_fb = _normalize_feedback_df(feedback_df)
     confirmed_train_ids: set[str] = set()
     val_fb_subset: pd.DataFrame | None = None
-    if feedback_df is not None and not feedback_df.empty:
+    if norm_fb is not None and not norm_fb.empty:
         train_ids_set = set(train_exp["transaction_id"].astype(str))
         val_ids_set = set(val_exp["transaction_id"].astype(str))
         confirmed_train_ids = set(
-            feedback_df[
-                feedback_df["is_confirmed_anomaly"].astype(bool)
-                & feedback_df["transaction_id"].astype(str).isin(train_ids_set)
+            norm_fb[
+                norm_fb["is_confirmed_anomaly"].astype(bool)
+                & norm_fb["transaction_id"].astype(str).isin(train_ids_set)
             ]["transaction_id"].astype(str)
         )
-        val_fb_subset = feedback_df[feedback_df["transaction_id"].astype(str).isin(val_ids_set)].copy()
+        val_fb_subset = norm_fb[norm_fb["transaction_id"].astype(str).isin(val_ids_set)].copy()
 
     cand_det = train_anomaly_detector(
         train_exp,
@@ -93,17 +145,28 @@ def retrain_and_maybe_promote(
             "seed": config.seed,
             "config_hash": config.config_hash(),
             "cutoffs": cutoffs.model_dump(mode="json"),
-            "retrained_with_feedback_rows": 0 if feedback_df is None else int(len(feedback_df)),
+            "retrained_with_feedback_rows": 0 if norm_fb is None else int(len(norm_fb)),
         },
     )
 
-    ds_active_ptr = dataset_dir / "models" / "active.json"
+    # Candidate inference smoke test
+    smoke_test_passed = False
+    try:
+        cand_loaded = ModelBundleLoader(cand_dir, allow_baseline_fallback=False).load()
+        smoke_uid = sorted(core_windows.keys())[0]
+        smoke_f3 = predict_next_7d(core_df, smoke_uid, cutoffs.val_end, cand_loaded)
+        smoke_f4 = detect_anomalies(core_df, smoke_uid, cand_loaded)
+        smoke_test_passed = (
+            smoke_f3.predicted_total_vnd is not None
+            and math.isfinite(float(smoke_f3.predicted_total_vnd))
+            and smoke_f4.status == "ok"
+        )
+    except Exception:
+        smoke_test_passed = False
+
     active_val_mae: float | None = None
     f3_gate_ok = True
-
-    if ds_active_ptr.exists():
-        loaded_active = ModelBundleLoader(ds_active_ptr, allow_baseline_fallback=False).load()
-        assert loaded_active.bundle is not None
+    if loaded_active is not None and loaded_active.bundle is not None:
         X_val = val_f[list(FORECAST_FEATURE_COLUMNS)]
         y_val = val_f["target_next_7d_vnd"].to_numpy(dtype=float)
         active_pred = loaded_active.bundle.forecast_estimator.predict(X_val)
@@ -112,7 +175,7 @@ def retrain_and_maybe_promote(
 
     lo, hi = config.anomaly.alert_rate_bounds
     f4_gate_ok = lo <= cand_det.validation_alert_rate <= hi
-    promoted = bool((f3_gate_ok and f4_gate_ok) or force_promote)
+    promoted = bool((f3_gate_ok and f4_gate_ok and smoke_test_passed) or force_promote)
 
     if promoted:
         set_active_pointer(ds_active_ptr, cand_dir, new_version, dataset_dir.name)
@@ -125,6 +188,7 @@ def retrain_and_maybe_promote(
         "force_promote": force_promote,
         "f3_gate_ok": f3_gate_ok,
         "f4_gate_ok": f4_gate_ok,
+        "smoke_test_passed": smoke_test_passed,
         "candidate_selected_forecast": cand_f_out.selected_name,
         "candidate_val_mae": cand_val_mae,
         "active_val_mae_on_new_window": active_val_mae,
