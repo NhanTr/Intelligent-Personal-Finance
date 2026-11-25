@@ -28,7 +28,7 @@ def test_forecast_features_are_strictly_causal_and_match_single_inference():
 
 def test_anomaly_features_causal_invariance_and_cold_user_unknown_category():
     train_tx = pd.DataFrame([
-        {"transaction_id": f"t{i}", "user_id": "u1", "timestamp": pd.Timestamp("2026-01-01T10:00:00+07:00") + pd.Timedelta(days=i), "type": "expense", "amount_vnd": 100000.0, "category": "food", "is_internal_transfer": False}
+        {"transaction_id": f"t{i}", "user_id": "u1", "timestamp": pd.Timestamp(pd.Timestamp("2026-01-01T10:00:00+07:00").to_pydatetime() + timedelta(days=i)), "type": "expense", "amount_vnd": 100000.0, "category": "food", "is_internal_transfer": False}
         for i in range(10)
     ])
     state = fit_anomaly_feature_state(train_tx)
