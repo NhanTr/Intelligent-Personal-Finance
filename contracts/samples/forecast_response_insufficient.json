@@ -1,0 +1,15 @@
+{
+  "status": "insufficient_data",
+  "user_id": "user_short_001",
+  "as_of_date": "2026-01-14",
+  "horizon_days": 7,
+  "forecast_start_date": "2026-01-15",
+  "forecast_end_date": "2026-01-21",
+  "predicted_total_vnd": null,
+  "unit": "VND",
+  "model_name": "none",
+  "model_version": "v1.0.0",
+  "days_available": 14,
+  "min_days_required": 28,
+  "limitations_note": "Chưa đủ lịch sử giao dịch để dự báo: hiện có 14 ngày, cần tối thiểu 28 ngày."
+}

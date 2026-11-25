@@ -1,4 +1,4 @@
-"""CLI script to evaluate F3/F4 on validation, rolling CV, and (if unlocked) test."""
+"""CLI script to evaluate F3/F4 on validation, rolling CV, latency SLA, manual review CSV, and (if unlocked) test."""
 
 from __future__ import annotations
 
@@ -6,6 +6,10 @@ import argparse
 import json
 from pathlib import Path
 import joblib
+import matplotlib
+
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import pandas as pd
 
 from finance_ml.config import load_config
@@ -16,8 +20,12 @@ from finance_ml.evaluation.rolling_cv import generate_expanding_cv_splits
 from finance_ml.evaluation.split import assign_forecast_origins, assign_transaction_splits, compute_time_cutoffs
 from finance_ml.evaluation.test_guard import TestLockGuard
 from finance_ml.features.forecast_features import FORECAST_FEATURE_COLUMNS, build_forecast_dataset
+from finance_ml.inference.benchmark import run_latency_benchmark
+from finance_ml.inference.loader import LoadedBundle
 from finance_ml.models.anomaly import score_expense_anomalies
-from finance_ml.models.forecast import build_linear_regression_model, build_rf_model, Last7DaysBaseline
+from finance_ml.models.forecast import Last7DaysBaseline, build_linear_regression_model, build_rf_model
+from finance_ml.reporting.model_card import render_model_card
+from finance_ml.reporting.review_export import export_manual_review_sample
 from scripts.train import filter_eligible_windows, load_processed_stream
 
 
@@ -44,6 +52,37 @@ def _evaluate_forecast_models_on_split(
     return out
 
 
+def _save_eval_figures(
+    dataset_name: str,
+    val_f3: dict[str, dict[str, object]],
+    val_scored: pd.DataFrame,
+    threshold: float,
+    figures_dir: Path,
+) -> None:
+    figures_dir.mkdir(parents=True, exist_ok=True)
+
+    fig, ax = plt.subplots(figsize=(7, 4))
+    names = list(val_f3.keys())
+    maes = [float(val_f3[k]["mae_vnd"]) / 1e6 for k in names]
+    ax.bar(names, maes)
+    ax.set_title(f"[{dataset_name}] So sánh Validation MAE (Triệu VND)")
+    ax.set_ylabel("MAE (Triệu VND)")
+    fig.tight_layout()
+    fig.savefig(figures_dir / "forecast_val_comparison.png", dpi=140)
+    plt.close(fig)
+
+    if not val_scored.empty:
+        fig, ax = plt.subplots(figsize=(7, 4))
+        ax.hist(val_scored["anomaly_score"].to_numpy(dtype=float), bins=30, edgecolor="black")
+        ax.axvline(threshold, color="red", linestyle="--", label=f"Threshold={threshold:.3f}")
+        ax.set_title(f"[{dataset_name}] Phân phối điểm bất thường trên Validation")
+        ax.set_xlabel("anomaly_score")
+        ax.legend()
+        fig.tight_layout()
+        fig.savefig(figures_dir / "anomaly_score_distribution.png", dpi=140)
+        plt.close(fig)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate F3/F4 models with strict 1-shot test lock.")
     parser.add_argument("--dataset", choices=["synthetic", "real_public"], default="synthetic")
@@ -56,6 +95,7 @@ def main() -> None:
     cfg = load_config(args.config)
     ds_art_dir = args.root / "artifacts" / args.dataset
     metrics_dir = ds_art_dir / "metrics"
+    figures_dir = ds_art_dir / "figures"
     metrics_dir.mkdir(parents=True, exist_ok=True)
 
     active_ptr = json.loads((ds_art_dir / "models" / "active.json").read_text(encoding="utf-8"))
@@ -81,7 +121,7 @@ def main() -> None:
         min_step_days=cfg.forecast.origin_step_days,
     )
 
-    # 1. Validation evaluation
+    # 1. Validation evaluation + manual review CSV export
     val_f3 = _evaluate_forecast_models_on_split(
         f_split[f_split["split"] == "validation"],
         bundle.all_forecast_models,
@@ -95,6 +135,14 @@ def main() -> None:
         bundle.anomaly_detector,
         history_expense_df=exp_split[exp_split["split"] == "train"],
     )
+    export_manual_review_sample(
+        val_scored,
+        ds_art_dir / "anomaly_manual_review_validation.csv",
+        top_k=30,
+        random_k=30,
+        seed=cfg.seed,
+    )
+    _save_eval_figures(args.dataset, val_f3, val_scored, bundle.anomaly_detector.threshold, figures_dir)
 
     # 2. Expanding-window rolling CV inside train+validation only
     folds = generate_expanding_cv_splits(daily_df, cutoffs, n_splits=3)
@@ -164,7 +212,16 @@ def main() -> None:
             encoding="utf-8",
         )
 
-    # 4. Optional 1-shot test evaluation (guarded by TestLockGuard; skipped when --unlock-test is False)
+    # 4. Latency SLA benchmark (>= 20 runs, <= 3.0s target)
+    sample_uid = sorted(core_windows.keys())[0]
+    loaded_bundle = LoadedBundle(bundle=bundle, fallback_only=False, version=bundle.version)
+    bench = run_latency_benchmark(loaded_bundle, core_df, sample_uid, cutoffs.val_end, n_runs=25)
+    (metrics_dir / "latency_benchmark.json").write_text(
+        json.dumps(bench, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    # 5. Optional 1-shot test evaluation (guarded by TestLockGuard; skipped when --unlock-test is False)
     if args.unlock_test:
         guard = TestLockGuard(metrics_dir / "test_evaluation_lock.json")
         lock_state = guard.verify_and_record(unlock=True, reason=args.reason, config_hash=cfg.config_hash())
@@ -178,6 +235,13 @@ def main() -> None:
             exp_split[exp_split["split"] == "test"],
             bundle.anomaly_detector,
             history_expense_df=dev_history,
+        )
+        export_manual_review_sample(
+            test_scored,
+            ds_art_dir / "anomaly_manual_review_test.csv",
+            top_k=30,
+            random_k=30,
+            seed=cfg.seed,
         )
         test_payload = {
             "dataset": args.dataset,
@@ -199,6 +263,8 @@ def main() -> None:
         print(f"[{args.dataset}] Test split unlocked & evaluated (unlock_count={lock_state['unlock_count']}).")
     else:
         print(f"[{args.dataset}] Validation & rolling CV complete. Test split remains LOCKED (policy 2A).")
+
+    render_model_card(args.root / "docs" / "model_card.md", args.root / "artifacts")
 
 
 if __name__ == "__main__":
