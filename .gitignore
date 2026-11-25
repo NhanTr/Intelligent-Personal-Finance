@@ -19,9 +19,18 @@ data/processed/
 *private*
 *.secret*
 
-# Generated heavy artifacts (reproducible via CLI scripts; commit docs/ & contracts/)
-artifacts/
-data/demo/
+# Generated artifacts (keep demo CSVs, active v1.0.0 model bundle & manual review CSV tracked for team handoff)
+artifacts/*
+!artifacts/models/
+artifacts/models/*
+!artifacts/models/active.json
+!artifacts/synthetic/
+artifacts/synthetic/*
+!artifacts/synthetic/models/
+artifacts/synthetic/models/*
+!artifacts/synthetic/models/active.json
+!artifacts/synthetic/models/v1.0.0/
+!artifacts/synthetic/anomaly_manual_review_validation.csv
 data/manifest.json
 docs/.eda_sections.json
 

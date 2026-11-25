@@ -1,0 +1,201 @@
+transaction_id,user_id,timestamp,type,amount_vnd,category,is_internal_transfer,note
+syn_user_001_00001,user_001,2026-01-01 19:11:00+07:00,expense,80000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00003,user_001,2026-01-02 07:29:00+07:00,expense,27000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00002,user_001,2026-01-02 10:05:00+07:00,expense,1809000.0,housing,False,Tiền thuê nhà đầu tháng
+syn_user_001_00004,user_001,2026-01-02 12:46:00+07:00,expense,39000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00005,user_001,2026-01-05 09:37:00+07:00,income,4663000.0,salary,False,Lương tháng
+syn_user_001_00006,user_001,2026-01-05 12:26:00+07:00,expense,43000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00007,user_001,2026-01-05 19:44:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00010,user_001,2026-01-06 07:04:00+07:00,expense,27000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00011,user_001,2026-01-06 08:27:00+07:00,expense,26000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00009,user_001,2026-01-06 19:24:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00008,user_001,2026-01-06 20:11:00+07:00,expense,245000.0,transfer,True,Chuyển tiền ví nội bộ / tiết kiệm
+syn_user_001_00012,user_001,2026-01-08 19:05:00+07:00,expense,50000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00013,user_001,2026-01-09 07:40:00+07:00,expense,68000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00014,user_001,2026-01-09 08:49:00+07:00,expense,24000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00015,user_001,2026-01-10 07:46:00+07:00,expense,59000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00018,user_001,2026-01-12 08:32:00+07:00,expense,24000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00017,user_001,2026-01-12 12:05:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00016,user_001,2026-01-12 12:33:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00019,user_001,2026-01-14 07:50:00+07:00,expense,53000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00020,user_001,2026-01-14 08:16:00+07:00,expense,35000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00023,user_001,2026-01-15 08:01:00+07:00,expense,36000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00021,user_001,2026-01-15 12:24:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00022,user_001,2026-01-15 19:19:00+07:00,expense,28000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00024,user_001,2026-01-18 12:40:00+07:00,expense,74000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00025,user_001,2026-01-18 16:06:00+07:00,expense,153000.0,health,False,Chi tiêu cuối tuần (health)
+syn_user_001_00026,user_001,2026-01-19 07:15:00+07:00,expense,87000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00029,user_001,2026-01-20 08:47:00+07:00,expense,27000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00027,user_001,2026-01-20 12:53:00+07:00,expense,26000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00028,user_001,2026-01-20 19:11:00+07:00,expense,39000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00031,user_001,2026-01-21 07:34:00+07:00,expense,33000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00030,user_001,2026-01-21 12:25:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00032,user_001,2026-01-22 07:11:00+07:00,expense,44000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00033,user_001,2026-01-22 07:39:00+07:00,expense,35000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00034,user_001,2026-01-23 12:20:00+07:00,expense,60000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00036,user_001,2026-01-24 07:28:00+07:00,expense,49000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00037,user_001,2026-01-24 12:55:00+07:00,expense,77000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00035,user_001,2026-01-24 20:08:00+07:00,expense,352000.0,transfer,True,Chuyển tiền ví nội bộ / tiết kiệm
+syn_user_001_00039,user_001,2026-01-25 07:00:00+07:00,expense,51000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00040,user_001,2026-01-25 08:52:00+07:00,expense,33000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00038,user_001,2026-01-25 12:16:00+07:00,expense,36000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00041,user_001,2026-01-25 19:07:00+07:00,expense,127000.0,health,False,Chi tiêu cuối tuần (health)
+syn_user_001_00043,user_001,2026-01-26 07:57:00+07:00,expense,58000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00044,user_001,2026-01-26 08:13:00+07:00,expense,33000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00042,user_001,2026-01-26 19:16:00+07:00,expense,265000.0,utilities,False,Điện nước internet cuối tháng
+syn_user_001_00046,user_001,2026-01-27 08:56:00+07:00,expense,32000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00045,user_001,2026-01-27 19:11:00+07:00,expense,53000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00047,user_001,2026-01-28 07:17:00+07:00,expense,59000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00048,user_001,2026-01-29 07:52:00+07:00,expense,67000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00049,user_001,2026-01-30 12:52:00+07:00,expense,83000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00050,user_001,2026-01-31 07:07:00+07:00,expense,60000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00051,user_001,2026-01-31 15:21:00+07:00,expense,145000.0,health,False,Chi tiêu cuối tuần (health)
+syn_user_001_00052,user_001,2026-02-01 07:57:00+07:00,expense,47000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00054,user_001,2026-02-01 08:10:00+07:00,expense,26000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00053,user_001,2026-02-01 12:08:00+07:00,expense,41000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00057,user_001,2026-02-02 07:01:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00055,user_001,2026-02-02 10:13:00+07:00,expense,1786000.0,housing,False,Tiền thuê nhà đầu tháng
+syn_user_001_00056,user_001,2026-02-02 19:24:00+07:00,expense,25000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00058,user_001,2026-02-04 07:28:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00059,user_001,2026-02-04 07:56:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00060,user_001,2026-02-04 08:56:00+07:00,expense,24000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00061,user_001,2026-02-05 09:54:00+07:00,income,4565000.0,salary,False,Lương tháng
+syn_user_001_00062,user_001,2026-02-06 19:10:00+07:00,expense,98000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00064,user_001,2026-02-07 07:47:00+07:00,expense,35000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00065,user_001,2026-02-07 08:19:00+07:00,expense,34000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00063,user_001,2026-02-07 12:06:00+07:00,expense,44000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00067,user_001,2026-02-08 07:26:00+07:00,expense,28000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00066,user_001,2026-02-08 07:38:00+07:00,expense,33000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00068,user_001,2026-02-08 08:15:00+07:00,expense,36000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00070,user_001,2026-02-11 08:09:00+07:00,expense,26000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00069,user_001,2026-02-11 19:54:00+07:00,expense,62000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00072,user_001,2026-02-14 08:58:00+07:00,expense,39000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00071,user_001,2026-02-14 19:23:00+07:00,expense,102000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00073,user_001,2026-02-15 20:29:00+07:00,expense,254000.0,transfer,True,Chuyển tiền ví nội bộ / tiết kiệm
+syn_user_001_00074,user_001,2026-02-16 12:00:00+07:00,expense,27000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00075,user_001,2026-02-16 12:52:00+07:00,expense,34000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00076,user_001,2026-02-17 19:49:00+07:00,expense,44000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00077,user_001,2026-02-18 19:36:00+07:00,expense,33000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00078,user_001,2026-02-18 19:48:00+07:00,expense,32000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00080,user_001,2026-02-19 07:08:00+07:00,expense,35000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00079,user_001,2026-02-19 19:37:00+07:00,expense,31000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00081,user_001,2026-02-21 07:10:00+07:00,expense,40000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00082,user_001,2026-02-21 19:46:00+07:00,expense,38000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00084,user_001,2026-02-22 12:31:00+07:00,expense,49000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00083,user_001,2026-02-22 12:38:00+07:00,expense,60000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00085,user_001,2026-02-22 19:02:00+07:00,expense,130000.0,shopping,False,Chi tiêu cuối tuần (shopping)
+syn_user_001_00088,user_001,2026-02-26 12:58:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00086,user_001,2026-02-26 19:11:00+07:00,expense,276000.0,utilities,False,Điện nước internet cuối tháng
+syn_user_001_00087,user_001,2026-02-26 19:23:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00090,user_001,2026-02-27 07:33:00+07:00,expense,28000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00089,user_001,2026-02-27 12:36:00+07:00,expense,28000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00093,user_001,2026-02-28 08:54:00+07:00,expense,25000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00092,user_001,2026-02-28 12:08:00+07:00,expense,26000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00091,user_001,2026-02-28 19:30:00+07:00,expense,44000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00094,user_001,2026-02-28 19:42:00+07:00,expense,137000.0,entertainment,False,Chi tiêu cuối tuần (entertainment)
+syn_user_001_00096,user_001,2026-03-01 08:46:00+07:00,expense,29000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00095,user_001,2026-03-01 19:44:00+07:00,expense,86000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00097,user_001,2026-03-01 21:08:00+07:00,expense,151000.0,entertainment,False,Chi tiêu cuối tuần (entertainment)
+syn_user_001_00098,user_001,2026-03-02 10:32:00+07:00,expense,1796000.0,housing,False,Tiền thuê nhà đầu tháng
+syn_user_001_00099,user_001,2026-03-02 19:55:00+07:00,expense,55000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00101,user_001,2026-03-03 19:15:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00100,user_001,2026-03-03 19:49:00+07:00,expense,39000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00104,user_001,2026-03-04 08:57:00+07:00,expense,31000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00102,user_001,2026-03-04 12:00:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00103,user_001,2026-03-04 19:48:00+07:00,expense,43000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00106,user_001,2026-03-05 07:02:00+07:00,expense,20000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00108,user_001,2026-03-05 08:49:00+07:00,expense,41000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00105,user_001,2026-03-05 09:27:00+07:00,income,4474000.0,salary,False,Lương tháng
+syn_user_001_00107,user_001,2026-03-05 19:45:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00110,user_001,2026-03-06 07:26:00+07:00,expense,28000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00109,user_001,2026-03-06 07:50:00+07:00,expense,34000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00112,user_001,2026-03-07 08:09:00+07:00,expense,34000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00111,user_001,2026-03-07 19:02:00+07:00,expense,91000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00113,user_001,2026-03-08 19:47:00+07:00,expense,70000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00114,user_001,2026-03-09 07:06:00+07:00,expense,55000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00115,user_001,2026-03-10 12:09:00+07:00,expense,54000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00117,user_001,2026-03-11 08:36:00+07:00,expense,34000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00116,user_001,2026-03-11 19:44:00+07:00,expense,95000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00118,user_001,2026-03-12 20:12:00+07:00,expense,426000.0,transfer,True,Chuyển tiền ví nội bộ / tiết kiệm
+syn_user_001_00119,user_001,2026-03-14 07:37:00+07:00,expense,45000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00120,user_001,2026-03-14 12:08:00+07:00,expense,44000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00121,user_001,2026-03-14 18:31:00+07:00,expense,126000.0,entertainment,False,Chi tiêu cuối tuần (entertainment)
+syn_user_001_00122,user_001,2026-03-16 07:07:00+07:00,expense,50000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00124,user_001,2026-03-16 08:36:00+07:00,expense,34000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00123,user_001,2026-03-16 19:16:00+07:00,expense,33000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00125,user_001,2026-03-17 19:12:00+07:00,expense,54000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00126,user_001,2026-03-19 07:20:00+07:00,expense,53000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00128,user_001,2026-03-20 07:25:00+07:00,expense,41000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00127,user_001,2026-03-20 07:46:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00131,user_001,2026-03-21 18:49:00+07:00,expense,113000.0,health,False,Chi tiêu cuối tuần (health)
+syn_user_001_00129,user_001,2026-03-21 19:07:00+07:00,expense,41000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00130,user_001,2026-03-21 19:43:00+07:00,expense,40000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00132,user_001,2026-03-24 07:03:00+07:00,expense,80000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00133,user_001,2026-03-24 08:43:00+07:00,expense,38000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00135,user_001,2026-03-25 07:29:00+07:00,expense,17000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00134,user_001,2026-03-25 07:39:00+07:00,expense,28000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00139,user_001,2026-03-26 08:00:00+07:00,expense,33000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00138,user_001,2026-03-26 12:19:00+07:00,expense,33000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00137,user_001,2026-03-26 19:44:00+07:00,expense,23000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00136,user_001,2026-03-26 19:56:00+07:00,expense,267000.0,utilities,False,Điện nước internet cuối tháng
+syn_user_001_00140,user_001,2026-03-28 12:47:00+07:00,expense,33000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00141,user_001,2026-03-28 19:29:00+07:00,expense,39000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00142,user_001,2026-03-28 20:44:00+07:00,expense,108000.0,entertainment,False,Chi tiêu cuối tuần (entertainment)
+syn_user_001_00143,user_001,2026-03-30 07:11:00+07:00,expense,23000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00144,user_001,2026-03-30 07:58:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00146,user_001,2026-03-31 12:39:00+07:00,expense,31000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00145,user_001,2026-03-31 19:37:00+07:00,expense,27000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00147,user_001,2026-04-01 12:54:00+07:00,expense,38000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00148,user_001,2026-04-01 19:31:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00149,user_001,2026-04-02 10:45:00+07:00,expense,1800000.0,housing,False,Tiền thuê nhà đầu tháng
+syn_user_001_00150,user_001,2026-04-02 12:22:00+07:00,expense,52000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00152,user_001,2026-04-04 08:18:00+07:00,expense,24000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00151,user_001,2026-04-04 12:10:00+07:00,expense,82000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00154,user_001,2026-04-05 07:10:00+07:00,expense,43000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00153,user_001,2026-04-05 09:11:00+07:00,income,4526000.0,salary,False,Lương tháng
+syn_user_001_00155,user_001,2026-04-05 19:42:00+07:00,expense,42000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00156,user_001,2026-04-06 07:56:00+07:00,expense,19000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00158,user_001,2026-04-06 08:29:00+07:00,expense,31000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00157,user_001,2026-04-06 12:51:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00159,user_001,2026-04-07 07:58:00+07:00,expense,46000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00160,user_001,2026-04-07 19:43:00+07:00,expense,34000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00163,user_001,2026-04-09 07:46:00+07:00,expense,36000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00162,user_001,2026-04-09 07:57:00+07:00,expense,34000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00164,user_001,2026-04-09 08:13:00+07:00,expense,37000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00161,user_001,2026-04-09 20:29:00+07:00,expense,354000.0,transfer,True,Chuyển tiền ví nội bộ / tiết kiệm
+syn_user_001_00165,user_001,2026-04-10 07:21:00+07:00,expense,36000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00166,user_001,2026-04-10 12:06:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00168,user_001,2026-04-11 08:47:00+07:00,expense,28000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00167,user_001,2026-04-11 19:23:00+07:00,expense,61000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00169,user_001,2026-04-13 07:41:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00170,user_001,2026-04-13 19:15:00+07:00,expense,44000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00171,user_001,2026-04-14 19:34:00+07:00,expense,59000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00172,user_001,2026-04-15 07:39:00+07:00,expense,37000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00173,user_001,2026-04-15 12:25:00+07:00,expense,23000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00175,user_001,2026-04-16 07:23:00+07:00,expense,22000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00174,user_001,2026-04-16 07:33:00+07:00,expense,32000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00178,user_001,2026-04-20 08:31:00+07:00,expense,39000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00176,user_001,2026-04-20 12:52:00+07:00,expense,30000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00177,user_001,2026-04-20 19:29:00+07:00,expense,32000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00181,user_001,2026-04-21 08:38:00+07:00,expense,28000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00180,user_001,2026-04-21 19:36:00+07:00,expense,39000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00179,user_001,2026-04-21 19:58:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00182,user_001,2026-04-23 12:34:00+07:00,expense,71000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00184,user_001,2026-04-24 07:46:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00183,user_001,2026-04-24 07:48:00+07:00,expense,29000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00185,user_001,2026-04-24 08:10:00+07:00,expense,25000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00188,user_001,2026-04-25 08:17:00+07:00,expense,28000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00186,user_001,2026-04-25 19:25:00+07:00,expense,44000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00187,user_001,2026-04-25 19:56:00+07:00,expense,50000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00189,user_001,2026-04-25 21:26:00+07:00,expense,115000.0,shopping,False,Chi tiêu cuối tuần (shopping)
+syn_user_001_00192,user_001,2026-04-26 16:28:00+07:00,expense,107000.0,education,False,Chi tiêu cuối tuần (education)
+syn_user_001_00191,user_001,2026-04-26 19:03:00+07:00,expense,80000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00190,user_001,2026-04-26 19:46:00+07:00,expense,228000.0,utilities,False,Điện nước internet cuối tháng
+syn_user_001_00194,user_001,2026-04-27 07:16:00+07:00,expense,62000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00195,user_001,2026-04-27 08:28:00+07:00,expense,31000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00193,user_001,2026-04-27 20:23:00+07:00,expense,231000.0,transfer,True,Chuyển tiền ví nội bộ / tiết kiệm
+syn_user_001_00196,user_001,2026-04-28 07:35:00+07:00,expense,42000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00197,user_001,2026-04-28 07:50:00+07:00,expense,23000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00198,user_001,2026-04-28 08:40:00+07:00,expense,29000.0,transport,False,Xăng xe / di chuyển
+syn_user_001_00199,user_001,2026-04-30 07:18:00+07:00,expense,73000.0,food,False,Ăn uống hàng ngày
+syn_user_001_00200,user_001,2026-05-01 20:08:00+07:00,expense,256000.0,transfer,True,Chuyển tiền ví nội bộ / tiết kiệm

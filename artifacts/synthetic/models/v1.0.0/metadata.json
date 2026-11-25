@@ -1,0 +1,179 @@
+{
+  "version": "v1.0.0",
+  "dataset_name": "synthetic",
+  "trained_at": "2026-11-25T13:03:19.368894+07:00",
+  "sklearn_version": "1.9.1",
+  "selected_forecast_name": "random_forest",
+  "forecast_fallback_used": false,
+  "best_rf_params": {
+    "n_estimators": 100,
+    "max_depth": 6,
+    "min_samples_leaf": 2
+  },
+  "anomaly_threshold": 0.07651422320743163,
+  "anomaly_validation_alert_rate": 0.05115089514066496,
+  "seed": 42,
+  "config_hash": "1968cd04cb6f343d",
+  "cutoffs": {
+    "train_start": "2026-01-01",
+    "train_end": "2026-06-29",
+    "val_start": "2026-06-30",
+    "val_end": "2026-08-28",
+    "test_start": "2026-08-29",
+    "test_end": "2026-10-27"
+  },
+  "val_forecast_comparison": {
+    "baseline_last_7d": {
+      "unit": "VND",
+      "mae_vnd": 2325125.0,
+      "rmse_vnd": 3281353.384085597,
+      "n_samples": 64,
+      "per_user": {
+        "user_001": {
+          "mae_vnd": 990750.0,
+          "rmse_vnd": 1266817.0744034043,
+          "n_samples": 8
+        },
+        "user_002": {
+          "mae_vnd": 1078500.0,
+          "rmse_vnd": 1420034.0664927727,
+          "n_samples": 8
+        },
+        "user_003": {
+          "mae_vnd": 1860500.0,
+          "rmse_vnd": 2351041.0460049394,
+          "n_samples": 8
+        },
+        "user_004": {
+          "mae_vnd": 2637250.0,
+          "rmse_vnd": 3531176.6098568337,
+          "n_samples": 8
+        },
+        "user_005": {
+          "mae_vnd": 2419625.0,
+          "rmse_vnd": 3106055.3560746466,
+          "n_samples": 8
+        },
+        "user_006": {
+          "mae_vnd": 2599625.0,
+          "rmse_vnd": 3256085.8595866296,
+          "n_samples": 8
+        },
+        "user_007": {
+          "mae_vnd": 3748625.0,
+          "rmse_vnd": 5059554.760549588,
+          "n_samples": 8
+        },
+        "user_008": {
+          "mae_vnd": 3266125.0,
+          "rmse_vnd": 4321058.478544349,
+          "n_samples": 8
+        }
+      },
+      "improvement_vs_baseline_pct": null,
+      "meets_10pct_target": null
+    },
+    "linear_regression": {
+      "unit": "VND",
+      "mae_vnd": 1009690.4824646747,
+      "rmse_vnd": 1446200.0756803018,
+      "n_samples": 64,
+      "per_user": {
+        "user_001": {
+          "mae_vnd": 958868.1996177246,
+          "rmse_vnd": 1521501.078585667,
+          "n_samples": 8
+        },
+        "user_002": {
+          "mae_vnd": 1035584.6319588316,
+          "rmse_vnd": 1686980.7032541076,
+          "n_samples": 8
+        },
+        "user_003": {
+          "mae_vnd": 976649.4420328656,
+          "rmse_vnd": 1480738.6502908866,
+          "n_samples": 8
+        },
+        "user_004": {
+          "mae_vnd": 887135.942247221,
+          "rmse_vnd": 1115768.7126361807,
+          "n_samples": 8
+        },
+        "user_005": {
+          "mae_vnd": 1074873.8155619497,
+          "rmse_vnd": 1491726.5218352855,
+          "n_samples": 8
+        },
+        "user_006": {
+          "mae_vnd": 719107.4053320208,
+          "rmse_vnd": 1237002.5301547223,
+          "n_samples": 8
+        },
+        "user_007": {
+          "mae_vnd": 1277573.959300718,
+          "rmse_vnd": 1493762.6023163646,
+          "n_samples": 8
+        },
+        "user_008": {
+          "mae_vnd": 1147730.4636660675,
+          "rmse_vnd": 1465200.0162757966,
+          "n_samples": 8
+        }
+      },
+      "baseline_mae_vnd": 2325125.0,
+      "improvement_vs_baseline_pct": 56.57478705597872,
+      "meets_10pct_target": true
+    },
+    "random_forest": {
+      "unit": "VND",
+      "mae_vnd": 500307.64846745215,
+      "rmse_vnd": 1024847.28409136,
+      "n_samples": 64,
+      "per_user": {
+        "user_001": {
+          "mae_vnd": 202307.4740599142,
+          "rmse_vnd": 254114.58219347976,
+          "n_samples": 8
+        },
+        "user_002": {
+          "mae_vnd": 145235.1212623394,
+          "rmse_vnd": 179499.6967466241,
+          "n_samples": 8
+        },
+        "user_003": {
+          "mae_vnd": 350719.72846093046,
+          "rmse_vnd": 464864.1430358008,
+          "n_samples": 8
+        },
+        "user_004": {
+          "mae_vnd": 675894.1176208087,
+          "rmse_vnd": 1312876.910983086,
+          "n_samples": 8
+        },
+        "user_005": {
+          "mae_vnd": 488776.25867111067,
+          "rmse_vnd": 801637.1567478756,
+          "n_samples": 8
+        },
+        "user_006": {
+          "mae_vnd": 746093.9106652037,
+          "rmse_vnd": 1041762.3129660863,
+          "n_samples": 8
+        },
+        "user_007": {
+          "mae_vnd": 794561.3666280755,
+          "rmse_vnd": 1783695.834255486,
+          "n_samples": 8
+        },
+        "user_008": {
+          "mae_vnd": 598873.2103712345,
+          "rmse_vnd": 1206853.4094294368,
+          "n_samples": 8
+        }
+      },
+      "baseline_mae_vnd": 2325125.0,
+      "improvement_vs_baseline_pct": 78.48254831600657,
+      "meets_10pct_target": true
+    }
+  }
+}
