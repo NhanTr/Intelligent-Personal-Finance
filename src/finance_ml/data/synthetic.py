@@ -230,7 +230,7 @@ def _build_anomaly_eval_df(
             target["note"] = "Ca mô phỏng: chi bất thường theo danh mục"
         else:
             # High-frequency burst within 1 hour + elevated amount
-            base_ts = pd.Timestamp(target["timestamp"])
+            base_dt = pd.Timestamp(target["timestamp"]).to_pydatetime()
             target["amount_vnd"] = round(float(target["amount_vnd"]) * 5.5, -3)
             target["category"] = "entertainment"
             target["is_injected_anomaly"] = True
@@ -240,7 +240,7 @@ def _build_anomaly_eval_df(
                     {
                         "transaction_id": f"{target['transaction_id']}_burst_{b}",
                         "user_id": target["user_id"],
-                        "timestamp": base_ts + pd.Timedelta(minutes=8 * (b + 1)),
+                        "timestamp": pd.Timestamp(base_dt + timedelta(minutes=8 * (b + 1))),
                         "type": "expense",
                         "amount_vnd": round(max(600_000.0, float(target["amount_vnd"]) * 0.8), -3),
                         "category": "entertainment",
