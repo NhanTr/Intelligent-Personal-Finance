@@ -11,6 +11,8 @@ from finance_ml.schema import VN_TZ
 
 
 class TestLockGuard:
+    __test__ = False
+
     def __init__(self, lock_path: Path) -> None:
         self.lock_path = Path(lock_path)
 
