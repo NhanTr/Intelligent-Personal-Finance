@@ -1,0 +1,30 @@
+name: Báo lỗi
+description: Ghi lỗi có bước tái hiện, kết quả mong đợi và thực tế.
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Nhánh / commit / môi trường
+      placeholder: develop, SHA, Python 3.12, hệ điều hành
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Bước tái hiện và dữ liệu mẫu đã ẩn danh
+    validations:
+      required: true
+  - type: textarea
+    id: expected-actual
+    attributes:
+      label: Kết quả mong đợi / thực tế / log hoặc ảnh
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Ảnh hưởng và kế hoạch xử lý
+      description: Chức năng, mức độ chặn demo, người làm, người review và tiêu chí xác nhận đã sửa.
+    validations:
+      required: true

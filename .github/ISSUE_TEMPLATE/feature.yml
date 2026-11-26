@@ -1,0 +1,38 @@
+name: Chức năng / đầu việc
+description: Giao một gói công việc có tiêu chí nghiệm thu và người rà soát.
+title: "[Task] "
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Mã công việc / chức năng
+      placeholder: K2 / F1
+    validations:
+      required: true
+  - type: input
+    id: owner-reviewer
+    attributes:
+      label: Người làm / người rà soát / hạn hoàn thành
+      placeholder: Khoa / Duy / ngày theo giờ Việt Nam
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Mục tiêu, phạm vi và phụ thuộc
+      description: Nêu hành vi cần có, phần bàn giao và đầu việc cần hoàn thành trước.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Tiêu chí nghiệm thu và cách kiểm thử
+      description: Ghi dữ liệu vào, kết quả mong đợi và minh chứng cần bàn giao.
+    validations:
+      required: true
+  - type: input
+    id: branch
+    attributes:
+      label: Nhánh / PR
+      description: Tạo nhánh mới từ origin/develop, rồi bổ sung link PR vào develop.
+      placeholder: feat/khoa-k2-import-csv-YYYYMMDD-HHMMSS
