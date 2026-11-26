@@ -2,6 +2,11 @@
 
 Gói dữ liệu, đặc trưng nhân quả, huấn luyện/đánh giá mô hình (`F3` Dự báo chi tiêu 7 ngày & `F4` Phát hiện giao dịch bất thường bằng `IsolationForest`) và hợp đồng tích hợp cho dự án môn **Phát triển hệ thống thông minh**.
 
+**Quy trình nhóm:** nhánh công việc → `develop` → `main`. Đọc
+[hướng dẫn cộng tác](CONTRIBUTING.md) trước khi tạo nhánh hoặc PR;
+[cấu hình GitHub dành cho Nhân](docs/contributing/github-settings.md) ghi các bước
+bật bảo vệ nhánh và đổi nhánh mặc định. File cấu hình cần được chủ repo áp dụng.
+
 ---
 
 ## 1. Yêu cầu Hệ thống & Cài đặt trên Môi trường Sạch (`M4`)
