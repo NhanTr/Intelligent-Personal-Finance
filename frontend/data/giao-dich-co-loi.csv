@@ -1,0 +1,6 @@
+transaction_id,user_id,date,type,amount,category,note
+LOI001,U001,2026-11-02,expense,-100000,Ăn uống,Số tiền âm
+LOI002,U001,2026-11-03,expense,,Ăn uống,Thiếu số tiền
+LOI003,U001,32-11-2026,expense,100000,Ăn uống,Ngày sai
+LOI004,U001,2026-11-05,invalid,100000,Di chuyển,Loại không hợp lệ
+LOI005,U001,2026-11-06,expense,100000,,Thiếu danh mục

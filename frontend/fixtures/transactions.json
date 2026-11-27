@@ -1,0 +1,2542 @@
+[
+  {
+    "transaction_id": "U001-I000",
+    "user_id": "U001",
+    "date": "2026-05-20",
+    "occurred_at": "2026-05-20T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E001",
+    "user_id": "U001",
+    "date": "2026-05-21",
+    "occurred_at": "2026-05-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E002",
+    "user_id": "U001",
+    "date": "2026-05-22",
+    "occurred_at": "2026-05-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E004",
+    "user_id": "U001",
+    "date": "2026-05-24",
+    "occurred_at": "2026-05-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E005",
+    "user_id": "U001",
+    "date": "2026-05-25",
+    "occurred_at": "2026-05-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E007",
+    "user_id": "U001",
+    "date": "2026-05-27",
+    "occurred_at": "2026-05-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E008",
+    "user_id": "U001",
+    "date": "2026-05-28",
+    "occurred_at": "2026-05-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E010",
+    "user_id": "U001",
+    "date": "2026-05-30",
+    "occurred_at": "2026-05-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E011",
+    "user_id": "U001",
+    "date": "2026-05-31",
+    "occurred_at": "2026-05-31T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E013",
+    "user_id": "U001",
+    "date": "2026-06-02",
+    "occurred_at": "2026-06-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 60000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E014",
+    "user_id": "U001",
+    "date": "2026-06-03",
+    "occurred_at": "2026-06-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E016",
+    "user_id": "U001",
+    "date": "2026-06-05",
+    "occurred_at": "2026-06-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E017",
+    "user_id": "U001",
+    "date": "2026-06-06",
+    "occurred_at": "2026-06-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 240000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E019",
+    "user_id": "U001",
+    "date": "2026-06-08",
+    "occurred_at": "2026-06-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E020",
+    "user_id": "U001",
+    "date": "2026-06-09",
+    "occurred_at": "2026-06-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E022",
+    "user_id": "U001",
+    "date": "2026-06-11",
+    "occurred_at": "2026-06-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E023",
+    "user_id": "U001",
+    "date": "2026-06-12",
+    "occurred_at": "2026-06-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 180000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E025",
+    "user_id": "U001",
+    "date": "2026-06-14",
+    "occurred_at": "2026-06-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E026",
+    "user_id": "U001",
+    "date": "2026-06-15",
+    "occurred_at": "2026-06-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E028",
+    "user_id": "U001",
+    "date": "2026-06-17",
+    "occurred_at": "2026-06-17T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E029",
+    "user_id": "U001",
+    "date": "2026-06-18",
+    "occurred_at": "2026-06-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-I030",
+    "user_id": "U001",
+    "date": "2026-06-19",
+    "occurred_at": "2026-06-19T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E031",
+    "user_id": "U001",
+    "date": "2026-06-20",
+    "occurred_at": "2026-06-20T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E032",
+    "user_id": "U001",
+    "date": "2026-06-21",
+    "occurred_at": "2026-06-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 90000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E034",
+    "user_id": "U001",
+    "date": "2026-06-23",
+    "occurred_at": "2026-06-23T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E035",
+    "user_id": "U001",
+    "date": "2026-06-24",
+    "occurred_at": "2026-06-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E037",
+    "user_id": "U001",
+    "date": "2026-06-26",
+    "occurred_at": "2026-06-26T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E038",
+    "user_id": "U001",
+    "date": "2026-06-27",
+    "occurred_at": "2026-06-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 160000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E040",
+    "user_id": "U001",
+    "date": "2026-06-29",
+    "occurred_at": "2026-06-29T12:00:00+07:00",
+    "type": "expense",
+    "amount": 240000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E041",
+    "user_id": "U001",
+    "date": "2026-06-30",
+    "occurred_at": "2026-06-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 300000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E043",
+    "user_id": "U001",
+    "date": "2026-07-02",
+    "occurred_at": "2026-07-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E044",
+    "user_id": "U001",
+    "date": "2026-07-03",
+    "occurred_at": "2026-07-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E046",
+    "user_id": "U001",
+    "date": "2026-07-05",
+    "occurred_at": "2026-07-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E047",
+    "user_id": "U001",
+    "date": "2026-07-06",
+    "occurred_at": "2026-07-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E049",
+    "user_id": "U001",
+    "date": "2026-07-08",
+    "occurred_at": "2026-07-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E050",
+    "user_id": "U001",
+    "date": "2026-07-09",
+    "occurred_at": "2026-07-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 160000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E052",
+    "user_id": "U001",
+    "date": "2026-07-11",
+    "occurred_at": "2026-07-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E053",
+    "user_id": "U001",
+    "date": "2026-07-12",
+    "occurred_at": "2026-07-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E055",
+    "user_id": "U001",
+    "date": "2026-07-14",
+    "occurred_at": "2026-07-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E056",
+    "user_id": "U001",
+    "date": "2026-07-15",
+    "occurred_at": "2026-07-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E058",
+    "user_id": "U001",
+    "date": "2026-07-17",
+    "occurred_at": "2026-07-17T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E059",
+    "user_id": "U001",
+    "date": "2026-07-18",
+    "occurred_at": "2026-07-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-I060",
+    "user_id": "U001",
+    "date": "2026-07-19",
+    "occurred_at": "2026-07-19T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E061",
+    "user_id": "U001",
+    "date": "2026-07-20",
+    "occurred_at": "2026-07-20T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E062",
+    "user_id": "U001",
+    "date": "2026-07-21",
+    "occurred_at": "2026-07-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E064",
+    "user_id": "U001",
+    "date": "2026-07-23",
+    "occurred_at": "2026-07-23T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E065",
+    "user_id": "U001",
+    "date": "2026-07-24",
+    "occurred_at": "2026-07-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 160000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E067",
+    "user_id": "U001",
+    "date": "2026-07-26",
+    "occurred_at": "2026-07-26T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E068",
+    "user_id": "U001",
+    "date": "2026-07-27",
+    "occurred_at": "2026-07-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E070",
+    "user_id": "U001",
+    "date": "2026-07-29",
+    "occurred_at": "2026-07-29T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E071",
+    "user_id": "U001",
+    "date": "2026-07-30",
+    "occurred_at": "2026-07-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 240000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E073",
+    "user_id": "U001",
+    "date": "2026-08-01",
+    "occurred_at": "2026-08-01T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E074",
+    "user_id": "U001",
+    "date": "2026-08-02",
+    "occurred_at": "2026-08-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E076",
+    "user_id": "U001",
+    "date": "2026-08-04",
+    "occurred_at": "2026-08-04T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E077",
+    "user_id": "U001",
+    "date": "2026-08-05",
+    "occurred_at": "2026-08-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E079",
+    "user_id": "U001",
+    "date": "2026-08-07",
+    "occurred_at": "2026-08-07T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E080",
+    "user_id": "U001",
+    "date": "2026-08-08",
+    "occurred_at": "2026-08-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E082",
+    "user_id": "U001",
+    "date": "2026-08-10",
+    "occurred_at": "2026-08-10T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E083",
+    "user_id": "U001",
+    "date": "2026-08-11",
+    "occurred_at": "2026-08-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E085",
+    "user_id": "U001",
+    "date": "2026-08-13",
+    "occurred_at": "2026-08-13T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E086",
+    "user_id": "U001",
+    "date": "2026-08-14",
+    "occurred_at": "2026-08-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 300000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E088",
+    "user_id": "U001",
+    "date": "2026-08-16",
+    "occurred_at": "2026-08-16T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E089",
+    "user_id": "U001",
+    "date": "2026-08-17",
+    "occurred_at": "2026-08-17T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-I090",
+    "user_id": "U001",
+    "date": "2026-08-18",
+    "occurred_at": "2026-08-18T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E091",
+    "user_id": "U001",
+    "date": "2026-08-19",
+    "occurred_at": "2026-08-19T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E092",
+    "user_id": "U001",
+    "date": "2026-08-20",
+    "occurred_at": "2026-08-20T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E094",
+    "user_id": "U001",
+    "date": "2026-08-22",
+    "occurred_at": "2026-08-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E095",
+    "user_id": "U001",
+    "date": "2026-08-23",
+    "occurred_at": "2026-08-23T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E097",
+    "user_id": "U001",
+    "date": "2026-08-25",
+    "occurred_at": "2026-08-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E098",
+    "user_id": "U001",
+    "date": "2026-08-26",
+    "occurred_at": "2026-08-26T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E100",
+    "user_id": "U001",
+    "date": "2026-08-28",
+    "occurred_at": "2026-08-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E101",
+    "user_id": "U001",
+    "date": "2026-08-29",
+    "occurred_at": "2026-08-29T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E103",
+    "user_id": "U001",
+    "date": "2026-08-31",
+    "occurred_at": "2026-08-31T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E104",
+    "user_id": "U001",
+    "date": "2026-09-01",
+    "occurred_at": "2026-09-01T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E106",
+    "user_id": "U001",
+    "date": "2026-09-03",
+    "occurred_at": "2026-09-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E107",
+    "user_id": "U001",
+    "date": "2026-09-04",
+    "occurred_at": "2026-09-04T12:00:00+07:00",
+    "type": "expense",
+    "amount": 160000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E109",
+    "user_id": "U001",
+    "date": "2026-09-06",
+    "occurred_at": "2026-09-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 90000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E110",
+    "user_id": "U001",
+    "date": "2026-09-07",
+    "occurred_at": "2026-09-07T12:00:00+07:00",
+    "type": "expense",
+    "amount": 200000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E112",
+    "user_id": "U001",
+    "date": "2026-09-09",
+    "occurred_at": "2026-09-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E113",
+    "user_id": "U001",
+    "date": "2026-09-10",
+    "occurred_at": "2026-09-10T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E115",
+    "user_id": "U001",
+    "date": "2026-09-12",
+    "occurred_at": "2026-09-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E116",
+    "user_id": "U001",
+    "date": "2026-09-13",
+    "occurred_at": "2026-09-13T12:00:00+07:00",
+    "type": "expense",
+    "amount": 300000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E118",
+    "user_id": "U001",
+    "date": "2026-09-15",
+    "occurred_at": "2026-09-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 180000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E119",
+    "user_id": "U001",
+    "date": "2026-09-16",
+    "occurred_at": "2026-09-16T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-I120",
+    "user_id": "U001",
+    "date": "2026-09-17",
+    "occurred_at": "2026-09-17T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E121",
+    "user_id": "U001",
+    "date": "2026-09-18",
+    "occurred_at": "2026-09-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E122",
+    "user_id": "U001",
+    "date": "2026-09-19",
+    "occurred_at": "2026-09-19T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E124",
+    "user_id": "U001",
+    "date": "2026-09-21",
+    "occurred_at": "2026-09-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E125",
+    "user_id": "U001",
+    "date": "2026-09-22",
+    "occurred_at": "2026-09-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E127",
+    "user_id": "U001",
+    "date": "2026-09-24",
+    "occurred_at": "2026-09-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E128",
+    "user_id": "U001",
+    "date": "2026-09-25",
+    "occurred_at": "2026-09-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E130",
+    "user_id": "U001",
+    "date": "2026-09-27",
+    "occurred_at": "2026-09-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E131",
+    "user_id": "U001",
+    "date": "2026-09-28",
+    "occurred_at": "2026-09-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E133",
+    "user_id": "U001",
+    "date": "2026-09-30",
+    "occurred_at": "2026-09-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E134",
+    "user_id": "U001",
+    "date": "2026-10-01",
+    "occurred_at": "2026-10-01T12:00:00+07:00",
+    "type": "expense",
+    "amount": 140000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E136",
+    "user_id": "U001",
+    "date": "2026-10-03",
+    "occurred_at": "2026-10-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E137",
+    "user_id": "U001",
+    "date": "2026-10-04",
+    "occurred_at": "2026-10-04T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E139",
+    "user_id": "U001",
+    "date": "2026-10-06",
+    "occurred_at": "2026-10-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E140",
+    "user_id": "U001",
+    "date": "2026-10-07",
+    "occurred_at": "2026-10-07T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E142",
+    "user_id": "U001",
+    "date": "2026-10-09",
+    "occurred_at": "2026-10-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E143",
+    "user_id": "U001",
+    "date": "2026-10-10",
+    "occurred_at": "2026-10-10T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E145",
+    "user_id": "U001",
+    "date": "2026-10-12",
+    "occurred_at": "2026-10-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E146",
+    "user_id": "U001",
+    "date": "2026-10-13",
+    "occurred_at": "2026-10-13T12:00:00+07:00",
+    "type": "expense",
+    "amount": 240000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E148",
+    "user_id": "U001",
+    "date": "2026-10-15",
+    "occurred_at": "2026-10-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 90000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E149",
+    "user_id": "U001",
+    "date": "2026-10-16",
+    "occurred_at": "2026-10-16T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-I150",
+    "user_id": "U001",
+    "date": "2026-10-17",
+    "occurred_at": "2026-10-17T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E151",
+    "user_id": "U001",
+    "date": "2026-10-18",
+    "occurred_at": "2026-10-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E152",
+    "user_id": "U001",
+    "date": "2026-10-19",
+    "occurred_at": "2026-10-19T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E154",
+    "user_id": "U001",
+    "date": "2026-10-21",
+    "occurred_at": "2026-10-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E155",
+    "user_id": "U001",
+    "date": "2026-10-22",
+    "occurred_at": "2026-10-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E157",
+    "user_id": "U001",
+    "date": "2026-10-24",
+    "occurred_at": "2026-10-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 160000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E158",
+    "user_id": "U001",
+    "date": "2026-10-25",
+    "occurred_at": "2026-10-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E160",
+    "user_id": "U001",
+    "date": "2026-10-27",
+    "occurred_at": "2026-10-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E161",
+    "user_id": "U001",
+    "date": "2026-10-28",
+    "occurred_at": "2026-10-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E163",
+    "user_id": "U001",
+    "date": "2026-10-30",
+    "occurred_at": "2026-10-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E164",
+    "user_id": "U001",
+    "date": "2026-10-31",
+    "occurred_at": "2026-10-31T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E166",
+    "user_id": "U001",
+    "date": "2026-11-02",
+    "occurred_at": "2026-11-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E167",
+    "user_id": "U001",
+    "date": "2026-11-03",
+    "occurred_at": "2026-11-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 90000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E169",
+    "user_id": "U001",
+    "date": "2026-11-05",
+    "occurred_at": "2026-11-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 200000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E170",
+    "user_id": "U001",
+    "date": "2026-11-06",
+    "occurred_at": "2026-11-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E172",
+    "user_id": "U001",
+    "date": "2026-11-08",
+    "occurred_at": "2026-11-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E173",
+    "user_id": "U001",
+    "date": "2026-11-09",
+    "occurred_at": "2026-11-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 180000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E175",
+    "user_id": "U001",
+    "date": "2026-11-11",
+    "occurred_at": "2026-11-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E176",
+    "user_id": "U001",
+    "date": "2026-11-12",
+    "occurred_at": "2026-11-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E178",
+    "user_id": "U001",
+    "date": "2026-11-14",
+    "occurred_at": "2026-11-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-E179",
+    "user_id": "U001",
+    "date": "2026-11-15",
+    "occurred_at": "2026-11-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U001-T001",
+    "user_id": "U001",
+    "date": "2026-11-10",
+    "occurred_at": "2026-11-10T09:00:00+07:00",
+    "type": "transfer",
+    "amount": 500000,
+    "category": "Chuyển nội bộ",
+    "note": "Không tính thu/chi"
+  },
+  {
+    "transaction_id": "U002-I000",
+    "user_id": "U002",
+    "date": "2026-05-20",
+    "occurred_at": "2026-05-20T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E001",
+    "user_id": "U002",
+    "date": "2026-05-21",
+    "occurred_at": "2026-05-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E002",
+    "user_id": "U002",
+    "date": "2026-05-22",
+    "occurred_at": "2026-05-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E004",
+    "user_id": "U002",
+    "date": "2026-05-24",
+    "occurred_at": "2026-05-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E005",
+    "user_id": "U002",
+    "date": "2026-05-25",
+    "occurred_at": "2026-05-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E007",
+    "user_id": "U002",
+    "date": "2026-05-27",
+    "occurred_at": "2026-05-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E008",
+    "user_id": "U002",
+    "date": "2026-05-28",
+    "occurred_at": "2026-05-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E010",
+    "user_id": "U002",
+    "date": "2026-05-30",
+    "occurred_at": "2026-05-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E011",
+    "user_id": "U002",
+    "date": "2026-05-31",
+    "occurred_at": "2026-05-31T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E013",
+    "user_id": "U002",
+    "date": "2026-06-02",
+    "occurred_at": "2026-06-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E014",
+    "user_id": "U002",
+    "date": "2026-06-03",
+    "occurred_at": "2026-06-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E016",
+    "user_id": "U002",
+    "date": "2026-06-05",
+    "occurred_at": "2026-06-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 60000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E017",
+    "user_id": "U002",
+    "date": "2026-06-06",
+    "occurred_at": "2026-06-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E019",
+    "user_id": "U002",
+    "date": "2026-06-08",
+    "occurred_at": "2026-06-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E020",
+    "user_id": "U002",
+    "date": "2026-06-09",
+    "occurred_at": "2026-06-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E022",
+    "user_id": "U002",
+    "date": "2026-06-11",
+    "occurred_at": "2026-06-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E023",
+    "user_id": "U002",
+    "date": "2026-06-12",
+    "occurred_at": "2026-06-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 200000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E025",
+    "user_id": "U002",
+    "date": "2026-06-14",
+    "occurred_at": "2026-06-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E026",
+    "user_id": "U002",
+    "date": "2026-06-15",
+    "occurred_at": "2026-06-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E028",
+    "user_id": "U002",
+    "date": "2026-06-17",
+    "occurred_at": "2026-06-17T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E029",
+    "user_id": "U002",
+    "date": "2026-06-18",
+    "occurred_at": "2026-06-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-I030",
+    "user_id": "U002",
+    "date": "2026-06-19",
+    "occurred_at": "2026-06-19T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E031",
+    "user_id": "U002",
+    "date": "2026-06-20",
+    "occurred_at": "2026-06-20T12:00:00+07:00",
+    "type": "expense",
+    "amount": 300000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E032",
+    "user_id": "U002",
+    "date": "2026-06-21",
+    "occurred_at": "2026-06-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E034",
+    "user_id": "U002",
+    "date": "2026-06-23",
+    "occurred_at": "2026-06-23T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E035",
+    "user_id": "U002",
+    "date": "2026-06-24",
+    "occurred_at": "2026-06-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 180000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E037",
+    "user_id": "U002",
+    "date": "2026-06-26",
+    "occurred_at": "2026-06-26T12:00:00+07:00",
+    "type": "expense",
+    "amount": 180000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E038",
+    "user_id": "U002",
+    "date": "2026-06-27",
+    "occurred_at": "2026-06-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E040",
+    "user_id": "U002",
+    "date": "2026-06-29",
+    "occurred_at": "2026-06-29T12:00:00+07:00",
+    "type": "expense",
+    "amount": 60000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E041",
+    "user_id": "U002",
+    "date": "2026-06-30",
+    "occurred_at": "2026-06-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E043",
+    "user_id": "U002",
+    "date": "2026-07-02",
+    "occurred_at": "2026-07-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E044",
+    "user_id": "U002",
+    "date": "2026-07-03",
+    "occurred_at": "2026-07-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E046",
+    "user_id": "U002",
+    "date": "2026-07-05",
+    "occurred_at": "2026-07-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E047",
+    "user_id": "U002",
+    "date": "2026-07-06",
+    "occurred_at": "2026-07-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E049",
+    "user_id": "U002",
+    "date": "2026-07-08",
+    "occurred_at": "2026-07-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E050",
+    "user_id": "U002",
+    "date": "2026-07-09",
+    "occurred_at": "2026-07-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E052",
+    "user_id": "U002",
+    "date": "2026-07-11",
+    "occurred_at": "2026-07-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 180000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E053",
+    "user_id": "U002",
+    "date": "2026-07-12",
+    "occurred_at": "2026-07-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E055",
+    "user_id": "U002",
+    "date": "2026-07-14",
+    "occurred_at": "2026-07-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E056",
+    "user_id": "U002",
+    "date": "2026-07-15",
+    "occurred_at": "2026-07-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E058",
+    "user_id": "U002",
+    "date": "2026-07-17",
+    "occurred_at": "2026-07-17T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E059",
+    "user_id": "U002",
+    "date": "2026-07-18",
+    "occurred_at": "2026-07-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-I060",
+    "user_id": "U002",
+    "date": "2026-07-19",
+    "occurred_at": "2026-07-19T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E061",
+    "user_id": "U002",
+    "date": "2026-07-20",
+    "occurred_at": "2026-07-20T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E062",
+    "user_id": "U002",
+    "date": "2026-07-21",
+    "occurred_at": "2026-07-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 290000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E064",
+    "user_id": "U002",
+    "date": "2026-07-23",
+    "occurred_at": "2026-07-23T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E065",
+    "user_id": "U002",
+    "date": "2026-07-24",
+    "occurred_at": "2026-07-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 200000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E067",
+    "user_id": "U002",
+    "date": "2026-07-26",
+    "occurred_at": "2026-07-26T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E068",
+    "user_id": "U002",
+    "date": "2026-07-27",
+    "occurred_at": "2026-07-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 60000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E070",
+    "user_id": "U002",
+    "date": "2026-07-29",
+    "occurred_at": "2026-07-29T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E071",
+    "user_id": "U002",
+    "date": "2026-07-30",
+    "occurred_at": "2026-07-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E073",
+    "user_id": "U002",
+    "date": "2026-08-01",
+    "occurred_at": "2026-08-01T12:00:00+07:00",
+    "type": "expense",
+    "amount": 300000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E074",
+    "user_id": "U002",
+    "date": "2026-08-02",
+    "occurred_at": "2026-08-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 140000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E076",
+    "user_id": "U002",
+    "date": "2026-08-04",
+    "occurred_at": "2026-08-04T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E077",
+    "user_id": "U002",
+    "date": "2026-08-05",
+    "occurred_at": "2026-08-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 300000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E079",
+    "user_id": "U002",
+    "date": "2026-08-07",
+    "occurred_at": "2026-08-07T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E080",
+    "user_id": "U002",
+    "date": "2026-08-08",
+    "occurred_at": "2026-08-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 200000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E082",
+    "user_id": "U002",
+    "date": "2026-08-10",
+    "occurred_at": "2026-08-10T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E083",
+    "user_id": "U002",
+    "date": "2026-08-11",
+    "occurred_at": "2026-08-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E085",
+    "user_id": "U002",
+    "date": "2026-08-13",
+    "occurred_at": "2026-08-13T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E086",
+    "user_id": "U002",
+    "date": "2026-08-14",
+    "occurred_at": "2026-08-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E088",
+    "user_id": "U002",
+    "date": "2026-08-16",
+    "occurred_at": "2026-08-16T12:00:00+07:00",
+    "type": "expense",
+    "amount": 280000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E089",
+    "user_id": "U002",
+    "date": "2026-08-17",
+    "occurred_at": "2026-08-17T12:00:00+07:00",
+    "type": "expense",
+    "amount": 60000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-I090",
+    "user_id": "U002",
+    "date": "2026-08-18",
+    "occurred_at": "2026-08-18T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E091",
+    "user_id": "U002",
+    "date": "2026-08-19",
+    "occurred_at": "2026-08-19T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E092",
+    "user_id": "U002",
+    "date": "2026-08-20",
+    "occurred_at": "2026-08-20T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E094",
+    "user_id": "U002",
+    "date": "2026-08-22",
+    "occurred_at": "2026-08-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E095",
+    "user_id": "U002",
+    "date": "2026-08-23",
+    "occurred_at": "2026-08-23T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E097",
+    "user_id": "U002",
+    "date": "2026-08-25",
+    "occurred_at": "2026-08-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E098",
+    "user_id": "U002",
+    "date": "2026-08-26",
+    "occurred_at": "2026-08-26T12:00:00+07:00",
+    "type": "expense",
+    "amount": 240000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E100",
+    "user_id": "U002",
+    "date": "2026-08-28",
+    "occurred_at": "2026-08-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E101",
+    "user_id": "U002",
+    "date": "2026-08-29",
+    "occurred_at": "2026-08-29T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E103",
+    "user_id": "U002",
+    "date": "2026-08-31",
+    "occurred_at": "2026-08-31T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E104",
+    "user_id": "U002",
+    "date": "2026-09-01",
+    "occurred_at": "2026-09-01T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E106",
+    "user_id": "U002",
+    "date": "2026-09-03",
+    "occurred_at": "2026-09-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 60000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E107",
+    "user_id": "U002",
+    "date": "2026-09-04",
+    "occurred_at": "2026-09-04T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E109",
+    "user_id": "U002",
+    "date": "2026-09-06",
+    "occurred_at": "2026-09-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E110",
+    "user_id": "U002",
+    "date": "2026-09-07",
+    "occurred_at": "2026-09-07T12:00:00+07:00",
+    "type": "expense",
+    "amount": 230000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E112",
+    "user_id": "U002",
+    "date": "2026-09-09",
+    "occurred_at": "2026-09-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E113",
+    "user_id": "U002",
+    "date": "2026-09-10",
+    "occurred_at": "2026-09-10T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E115",
+    "user_id": "U002",
+    "date": "2026-09-12",
+    "occurred_at": "2026-09-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E116",
+    "user_id": "U002",
+    "date": "2026-09-13",
+    "occurred_at": "2026-09-13T12:00:00+07:00",
+    "type": "expense",
+    "amount": 120000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E118",
+    "user_id": "U002",
+    "date": "2026-09-15",
+    "occurred_at": "2026-09-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 170000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E119",
+    "user_id": "U002",
+    "date": "2026-09-16",
+    "occurred_at": "2026-09-16T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-I120",
+    "user_id": "U002",
+    "date": "2026-09-17",
+    "occurred_at": "2026-09-17T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E121",
+    "user_id": "U002",
+    "date": "2026-09-18",
+    "occurred_at": "2026-09-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 140000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E122",
+    "user_id": "U002",
+    "date": "2026-09-19",
+    "occurred_at": "2026-09-19T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E124",
+    "user_id": "U002",
+    "date": "2026-09-21",
+    "occurred_at": "2026-09-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 50000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E125",
+    "user_id": "U002",
+    "date": "2026-09-22",
+    "occurred_at": "2026-09-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 240000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E127",
+    "user_id": "U002",
+    "date": "2026-09-24",
+    "occurred_at": "2026-09-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E128",
+    "user_id": "U002",
+    "date": "2026-09-25",
+    "occurred_at": "2026-09-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E130",
+    "user_id": "U002",
+    "date": "2026-09-27",
+    "occurred_at": "2026-09-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E131",
+    "user_id": "U002",
+    "date": "2026-09-28",
+    "occurred_at": "2026-09-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 90000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E133",
+    "user_id": "U002",
+    "date": "2026-09-30",
+    "occurred_at": "2026-09-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E134",
+    "user_id": "U002",
+    "date": "2026-10-01",
+    "occurred_at": "2026-10-01T12:00:00+07:00",
+    "type": "expense",
+    "amount": 160000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E136",
+    "user_id": "U002",
+    "date": "2026-10-03",
+    "occurred_at": "2026-10-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E137",
+    "user_id": "U002",
+    "date": "2026-10-04",
+    "occurred_at": "2026-10-04T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E139",
+    "user_id": "U002",
+    "date": "2026-10-06",
+    "occurred_at": "2026-10-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 140000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E140",
+    "user_id": "U002",
+    "date": "2026-10-07",
+    "occurred_at": "2026-10-07T12:00:00+07:00",
+    "type": "expense",
+    "amount": 300000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E142",
+    "user_id": "U002",
+    "date": "2026-10-09",
+    "occurred_at": "2026-10-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E143",
+    "user_id": "U002",
+    "date": "2026-10-10",
+    "occurred_at": "2026-10-10T12:00:00+07:00",
+    "type": "expense",
+    "amount": 260000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E145",
+    "user_id": "U002",
+    "date": "2026-10-12",
+    "occurred_at": "2026-10-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 140000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E146",
+    "user_id": "U002",
+    "date": "2026-10-13",
+    "occurred_at": "2026-10-13T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E148",
+    "user_id": "U002",
+    "date": "2026-10-15",
+    "occurred_at": "2026-10-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E149",
+    "user_id": "U002",
+    "date": "2026-10-16",
+    "occurred_at": "2026-10-16T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-I150",
+    "user_id": "U002",
+    "date": "2026-10-17",
+    "occurred_at": "2026-10-17T09:00:00+07:00",
+    "type": "income",
+    "amount": 8000000,
+    "category": "Lương",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E151",
+    "user_id": "U002",
+    "date": "2026-10-18",
+    "occurred_at": "2026-10-18T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E152",
+    "user_id": "U002",
+    "date": "2026-10-19",
+    "occurred_at": "2026-10-19T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E154",
+    "user_id": "U002",
+    "date": "2026-10-21",
+    "occurred_at": "2026-10-21T12:00:00+07:00",
+    "type": "expense",
+    "amount": 240000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E155",
+    "user_id": "U002",
+    "date": "2026-10-22",
+    "occurred_at": "2026-10-22T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E157",
+    "user_id": "U002",
+    "date": "2026-10-24",
+    "occurred_at": "2026-10-24T12:00:00+07:00",
+    "type": "expense",
+    "amount": 110000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E158",
+    "user_id": "U002",
+    "date": "2026-10-25",
+    "occurred_at": "2026-10-25T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E160",
+    "user_id": "U002",
+    "date": "2026-10-27",
+    "occurred_at": "2026-10-27T12:00:00+07:00",
+    "type": "expense",
+    "amount": 210000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E161",
+    "user_id": "U002",
+    "date": "2026-10-28",
+    "occurred_at": "2026-10-28T12:00:00+07:00",
+    "type": "expense",
+    "amount": 130000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E163",
+    "user_id": "U002",
+    "date": "2026-10-30",
+    "occurred_at": "2026-10-30T12:00:00+07:00",
+    "type": "expense",
+    "amount": 70000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E164",
+    "user_id": "U002",
+    "date": "2026-10-31",
+    "occurred_at": "2026-10-31T12:00:00+07:00",
+    "type": "expense",
+    "amount": 180000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E166",
+    "user_id": "U002",
+    "date": "2026-11-02",
+    "occurred_at": "2026-11-02T12:00:00+07:00",
+    "type": "expense",
+    "amount": 60000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E167",
+    "user_id": "U002",
+    "date": "2026-11-03",
+    "occurred_at": "2026-11-03T12:00:00+07:00",
+    "type": "expense",
+    "amount": 150000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E169",
+    "user_id": "U002",
+    "date": "2026-11-05",
+    "occurred_at": "2026-11-05T12:00:00+07:00",
+    "type": "expense",
+    "amount": 250000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E170",
+    "user_id": "U002",
+    "date": "2026-11-06",
+    "occurred_at": "2026-11-06T12:00:00+07:00",
+    "type": "expense",
+    "amount": 100000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E172",
+    "user_id": "U002",
+    "date": "2026-11-08",
+    "occurred_at": "2026-11-08T12:00:00+07:00",
+    "type": "expense",
+    "amount": 190000,
+    "category": "Mua sắm",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E173",
+    "user_id": "U002",
+    "date": "2026-11-09",
+    "occurred_at": "2026-11-09T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Di chuyển",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E175",
+    "user_id": "U002",
+    "date": "2026-11-11",
+    "occurred_at": "2026-11-11T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E176",
+    "user_id": "U002",
+    "date": "2026-11-12",
+    "occurred_at": "2026-11-12T12:00:00+07:00",
+    "type": "expense",
+    "amount": 80000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E178",
+    "user_id": "U002",
+    "date": "2026-11-14",
+    "occurred_at": "2026-11-14T12:00:00+07:00",
+    "type": "expense",
+    "amount": 270000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-E179",
+    "user_id": "U002",
+    "date": "2026-11-15",
+    "occurred_at": "2026-11-15T12:00:00+07:00",
+    "type": "expense",
+    "amount": 220000,
+    "category": "Ăn uống",
+    "note": "Mô phỏng"
+  },
+  {
+    "transaction_id": "U002-T001",
+    "user_id": "U002",
+    "date": "2026-11-10",
+    "occurred_at": "2026-11-10T09:00:00+07:00",
+    "type": "transfer",
+    "amount": 500000,
+    "category": "Chuyển nội bộ",
+    "note": "Không tính thu/chi"
+  }
+]

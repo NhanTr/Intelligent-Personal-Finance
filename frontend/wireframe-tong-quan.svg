@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1070" viewBox="0 0 1240 1070" role="img" aria-labelledby="title desc">
+  <title id="title">Wireframe D1 Sổ Mây</title>
+  <desc id="desc">Năm luồng Đăng nhập và Thu chi, Dashboard, Dự báo, Cảnh báo và Tiết kiệm. Mỗi khung thể hiện bố cục và các trạng thái cần thử.</desc>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill:#252525; font-size:14px; }
+    .heading { font-size:31px; font-weight:700; }
+    .name { font-size:19px; font-weight:700; }
+    .strong { font-weight:650; }
+    .quiet { fill:#555; font-size:13px; }
+    .canvas { fill:#fff; stroke:#aaa; }
+    .field { fill:#f7f7f7; stroke:#c1c1c1; }
+    .rule { stroke:#c1c1c1; }
+    .bar { fill:#777; }
+    .bar-light { fill:#bcbcbc; }
+  </style>
+  <rect width="1240" height="1070" fill="#eee"/>
+  <text class="heading" x="32" y="49">Sổ Mây · Wireframe D1</text>
+  <text class="quiet" x="32" y="75">Năm luồng để rà bố cục, thao tác và thông báo trước khi nối API</text>
+
+  <g transform="translate(32 103)">
+    <rect class="canvas" width="574" height="303" rx="8"/>
+    <text class="name" x="18" y="31">F1 · Đăng nhập và thu chi</text>
+    <path class="rule" d="M18 45h538 M205 60v198"/>
+    <text class="strong" x="18" y="76">Đăng nhập</text>
+    <rect class="field" x="18" y="89" width="167" height="29" rx="4"/>
+    <rect class="field" x="18" y="126" width="167" height="29" rx="4"/>
+    <rect class="field" x="18" y="163" width="105" height="29" rx="4"/>
+    <text x="27" y="108">Tài khoản demo</text><text x="27" y="145">Mật khẩu</text><text x="27" y="182">Đăng nhập</text>
+    <text class="quiet" x="18" y="212">Báo lỗi nếu nhập sai</text>
+    <text class="strong" x="223" y="76">Danh sách giao dịch</text>
+    <rect class="field" x="223" y="89" width="331" height="28" rx="4"/>
+    <text x="233" y="108">Từ ngày · Đến ngày · Loại · Danh mục</text>
+    <rect class="field" x="223" y="126" width="331" height="58" rx="4"/>
+    <text class="quiet" x="233" y="145">Ngày · Loại · Danh mục · Số tiền · Ghi chú</text>
+    <path class="rule" d="M233 153h310 M233 171h310"/>
+    <text class="quiet" x="223" y="204">Cuối bảng: Thu · Chi · Chênh lệch</text>
+    <rect class="field" x="223" y="216" width="331" height="34" rx="4"/>
+    <text x="233" y="238">Thêm · Nhập CSV · Sửa hoặc xóa</text>
+    <text class="quiet" x="18" y="279">CSV: chọn file → xem trước hoặc xem lỗi theo dòng → xác nhận nhập</text>
+  </g>
+
+  <g transform="translate(634 103)">
+    <rect class="canvas" width="574" height="303" rx="8"/>
+    <text class="name" x="18" y="31">F2 · Dashboard</text>
+    <path class="rule" d="M18 45h538"/>
+    <rect class="field" x="18" y="58" width="262" height="30" rx="4"/>
+    <rect class="field" x="292" y="58" width="264" height="30" rx="4"/>
+    <text x="30" y="78">Từ ngày</text><text x="304" y="78">Đến ngày</text>
+    <rect class="field" x="18" y="98" width="538" height="45" rx="4"/>
+    <text class="strong" x="30" y="125">Chênh lệch thu − chi</text><text x="267" y="125">Tổng thu</text><text x="425" y="125">Tổng chi</text>
+    <rect class="field" x="18" y="154" width="262" height="102" rx="4"/>
+    <text class="strong" x="30" y="177">Chi theo danh mục</text>
+    <text class="quiet" x="30" y="201">Số tiền · Tỷ trọng</text>
+    <rect class="bar" x="183" y="192" width="74" height="7" rx="2"/>
+    <rect class="bar-light" x="183" y="210" width="53" height="7" rx="2"/>
+    <text class="quiet" x="30" y="241">Đối chiếu khoảng trước</text>
+    <rect class="field" x="292" y="154" width="264" height="102" rx="4"/>
+    <text class="strong" x="304" y="177">Thu và chi · Tuần / Tháng</text>
+    <path class="rule" d="M308 222h230"/>
+    <rect class="bar" x="360" y="193" width="16" height="29"/><rect class="bar-light" x="380" y="201" width="16" height="21"/>
+    <rect class="bar" x="445" y="202" width="16" height="20"/><rect class="bar-light" x="465" y="189" width="16" height="33"/>
+    <text class="quiet" x="304" y="241">Kỳ trước · Kỳ này · Chênh lệch</text>
+    <text class="quiet" x="18" y="279">Trống: thêm giao dịch hoặc đổi khoảng ngày</text>
+  </g>
+
+  <g transform="translate(32 426)">
+    <rect class="canvas" width="574" height="246" rx="8"/>
+    <text class="name" x="18" y="31">F3 · Dự báo 7 ngày</text>
+    <path class="rule" d="M18 45h538"/>
+    <rect class="field" x="18" y="57" width="538" height="28" rx="4"/>
+    <text class="quiet" x="30" y="76">Dữ liệu mẫu theo contract ML</text>
+    <text class="strong" x="18" y="114">Tổng chi dự kiến (VND)</text><text x="320" y="114">Khoảng dự báo 7 ngày</text>
+    <rect class="field" x="18" y="124" width="200" height="30" rx="4"/>
+    <text class="quiet" x="18" y="178">Ngày gốc · Số ngày lịch sử · Phương pháp · Phiên bản</text>
+    <text class="quiet" x="18" y="202">Thông tin giới hạn của dự báo</text>
+    <text class="quiet" x="18" y="225">Trạng thái: dự báo cơ sở hoặc chưa đủ lịch sử</text>
+  </g>
+
+  <g transform="translate(634 426)">
+    <rect class="canvas" width="574" height="246" rx="8"/>
+    <text class="name" x="18" y="31">F4 · Cảnh báo giao dịch</text>
+    <path class="rule" d="M18 45h538"/>
+    <text class="quiet" x="18" y="69">Dữ liệu mẫu · Số giao dịch chi đã chấm · Số được đánh dấu</text>
+    <rect class="field" x="18" y="82" width="538" height="111" rx="4"/>
+    <text class="strong" x="30" y="106">Danh mục · Số tiền (VND)</text>
+    <text class="quiet" x="30" y="130">Thời điểm · Điểm · Ngưỡng</text>
+    <text class="quiet" x="30" y="155">Lý do cần xem xét</text>
+    <rect class="canvas" x="387" y="104" width="64" height="29" rx="4"/>
+    <rect class="canvas" x="459" y="104" width="64" height="29" rx="4"/>
+    <text x="401" y="123">Đúng</text><text x="479" y="123">Sai</text>
+    <text class="quiet" x="387" y="156">Đã ghi trong phiên</text>
+    <text class="quiet" x="18" y="225">Trạng thái: không có cảnh báo hoặc mô hình chưa sẵn sàng</text>
+  </g>
+
+  <g transform="translate(32 692)">
+    <rect class="canvas" width="1176" height="342" rx="8"/>
+    <text class="name" x="18" y="31">F5 · Mô phỏng tiết kiệm</text>
+    <path class="rule" d="M18 45h1140 M501 64v222"/>
+    <text class="strong" x="18" y="77">Giả định của bạn</text><text class="strong" x="524" y="77">So sánh kịch bản</text>
+    <g class="field">
+      <rect x="18" y="91" width="455" height="27" rx="4"/><rect x="18" y="125" width="455" height="27" rx="4"/>
+      <rect x="18" y="159" width="455" height="27" rx="4"/><rect x="18" y="193" width="455" height="27" rx="4"/>
+      <rect x="18" y="227" width="455" height="27" rx="4"/>
+      <rect x="524" y="91" width="634" height="51" rx="4"/><rect x="524" y="150" width="634" height="51" rx="4"/>
+      <rect x="524" y="209" width="634" height="51" rx="4"/>
+    </g>
+    <text x="30" y="109">Mục tiêu</text><text x="30" y="143">Đã tiết kiệm</text><text x="30" y="177">Thu nhập mỗi tháng</text>
+    <text x="30" y="211">Chi thiết yếu mỗi tháng</text><text x="30" y="245">Chi tùy chọn mỗi tháng</text>
+    <text class="strong" x="536" y="112">Giữ nguyên</text>
+    <text class="strong" x="536" y="171">Giảm 10% chi tùy chọn</text>
+    <text class="strong" x="536" y="230">Giảm 20% chi tùy chọn</text>
+    <text class="quiet" x="536" y="132">Chi và tiết kiệm mỗi tháng</text>
+    <text class="quiet" x="536" y="191">Chi và tiết kiệm mỗi tháng</text>
+    <text class="quiet" x="536" y="250">Chi và tiết kiệm mỗi tháng</text>
+    <text x="1050" y="121">Số tháng</text><text x="1050" y="180">Số tháng</text><text x="1050" y="239">Số tháng</text>
+    <text class="quiet" x="18" y="310">Đã đủ mục tiêu: 0 tháng. Nếu còn thiếu và tiết kiệm không dương: chưa thể đạt. Không tính lãi.</text>
+  </g>
+</svg>

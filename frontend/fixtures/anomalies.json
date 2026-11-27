@@ -1,0 +1,8 @@
+[
+  {
+    "user_id": "U001",
+    "transaction_id": "U001-E001",
+    "context": "Ví dụ mô phỏng, cần xem xét",
+    "model_version": "mock"
+  }
+]
