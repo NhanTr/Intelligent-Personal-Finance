@@ -1,0 +1,8 @@
+transaction_id,user_id,date,type,amount,category,note
+GD001,U001,2026-11-01,income,8000000,Lương,Lương tháng
+GD002,U001,2026-11-02,expense,120000,Ăn uống,Ăn trưa
+GD003,U001,2026-11-03,expense,50000,Di chuyển,Xăng xe
+GD004,U001,2026-11-09,expense,180000,Ăn uống,Ăn tối
+GD005,U001,2026-11-10,expense,300000,Mua sắm,Đồ dùng
+GD006,U001,2026-11-12,expense,100000,Di chuyển,Xăng xe
+GD007,U001,2026-11-13,transfer,500000,Chuyển nội bộ,Không tính thu chi

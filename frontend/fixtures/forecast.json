@@ -1,0 +1,16 @@
+{
+  "U001": {
+    "status": "ok",
+    "value": 1200000,
+    "unit": "VND",
+    "from": "2026-11-16",
+    "to": "2026-11-22",
+    "generated_at": "2026-11-16T09:00:00+07:00",
+    "model_version": "mock",
+    "used_fallback": true
+  },
+  "U002": {
+    "status": "insufficient_history",
+    "min_days": 28
+  }
+}

@@ -1,0 +1,3 @@
+transaction_id,user_id,date,type,amount,category,note
+GD001,U001,2026-11-02,expense,100000,Ăn uống,Dòng đầu
+GD001,U001,2026-11-03,expense,120000,Ăn uống,Trùng mã

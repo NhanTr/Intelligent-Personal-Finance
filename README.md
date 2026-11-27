@@ -9,6 +9,12 @@ bật bảo vệ nhánh và đổi nhánh mặc định. File cấu hình cần 
 
 ---
 
+## Wireframe và giao diện mock D1
+
+Xem [hướng dẫn chạy và rà soát Wireframe D1](frontend/README.md).
+
+---
+
 ## 1. Yêu cầu Hệ thống & Cài đặt trên Môi trường Sạch (`M4`)
 
 - **Python:** `3.12`
